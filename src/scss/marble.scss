@@ -1,0 +1,2355 @@
+@charset "UTF-8";
+* { 
+  margin: 0;
+  padding: 0;
+  font-size: 1vw;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+  user-select: none;
+  background: transparent;
+  pointer-events: none;
+  box-sizing: border-box;
+  font-family: "NanumSquareRound", sans-serif;
+  color: #333;
+  list-style-type: none;
+  transform-origin: center center;
+}
+
+html, body{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+button, input[type="button"], input[type="submit"]{
+  cursor: pointer;
+}
+*::-webkit-scrollbar{
+  display:none;
+}
+blockquote, q {
+  quotes: none;
+}
+a, button {
+  cursor: pointer;
+}
+p, span {
+  cursor: default;
+}
+p{
+  word-break: keep-all;
+}
+table, thead, tbody, th, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+  cursor: default;
+}
+@mixin flex_center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @content;
+}
+
+html { 
+  width: 100%;
+  height: 100%;
+  body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+    background: url('../img/background.png') no-repeat center center/cover;
+    position: relative;
+    perspective: 150vw;
+    .top_area {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding-left: 1vw;
+      padding-right: 1vw;
+      align-items: flex-start;
+      &>section:nth-child(1) {
+        width: 20%;
+        height: 90%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        &>article:nth-child(1) {
+          width: 100%;
+          height: 25%;
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: flex-start;
+          align-items: center;
+          border-radius: 1vw;
+          background: rgba( 255,70,50, 0.7 );
+          box-shadow: 0 1vw 1.5vw 0 rgba( 255,255,255, 0.4 );
+          border: 0.1vw solid rgba( 255, 255, 255, 0.18 );
+          &>article:nth-child(1) {
+            width: 30%;
+            height: 100%;
+            @include flex_center();
+            .user_img_1 {
+              width: 90%;
+              height: 90%;
+              // background: url('../img/obj3.png') no-repeat center center/contain;
+            }
+          }
+          &>article:nth-child(2) {
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: center;
+            &>div {
+              width: 90%;
+              height: 45%;
+              @include flex_center();
+              &>p {
+                font-size: 1.5vw;
+                font-weight: 600;
+                color: #FFF;
+              }
+            }
+          }
+        }
+        &>div {
+          width: 30%;
+          height: 2.2vw;
+          border-radius: 0.5vw;
+          background: rgba( 255,255,255, 0.2 );
+          border: 0.3vw solid #333;
+          @include flex_center();
+          pointer-events: all;
+          transition: all 0.3s;
+          cursor: pointer;
+          border-radius: 2vw;
+          margin-top: 2vh;
+          &>p {
+            pointer-events: none;
+            font-size: 1.3vw;
+            font-weight: bold;
+            color: #333;
+            transition: all 0.3s;
+          }
+          &:hover {
+            transition: all 0.3s;
+            background: #FFF;
+            border-color: #F54;
+            filter: drop-shadow(0.2vw 0.2vw 0 #333);
+            &>p {
+              transition: all 0.3s;
+              color: #F54;
+            }
+          }
+        }
+      }
+      &>section:nth-child(2) {
+        width: 20%;
+        height: 25%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        &>div {
+          width: 60%;
+          height: 45%;
+          border-radius: 1vw;
+          background: rgba( 30,30,30, 0.8 );
+          box-shadow: 0 1vw 2.5vw 0 rgba( 145, 38, 65, 0.4 );
+          backdrop-filter: blur( 0.5rem );
+          -webkit-backdrop-filter: blur( 0.5rem );
+          border: 0.1vw solid rgba( 255, 255, 255, 0.18 );
+          @include flex_center();
+          &>p {
+            font-size: 1.5vw;
+            font-weight: 600;
+            color: #FFF;
+          }
+          &:nth-child(1) {
+            margin-left: -3vw;
+            width: 100%;
+            &>p {
+              font-size: 1vw;
+              font-weight: 400;
+            }
+          }
+          &:nth-child(2) {
+            margin-left: 8vw;
+          }
+        }
+      }
+    }
+    .bottom_area {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding-left: 1vw;
+      padding-right: 1vw;
+      align-items: flex-end;
+      &>section:nth-child(1) {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        &>p {
+          font-size: 1.4vw;
+          font-weight: 900;
+          color: #333;
+          margin-bottom: 0.5vh;
+        }
+        &>article {
+          width: 90%;
+          height: 100%;
+          overflow-x: hidden;
+          overflow-y: auto;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: flex-start;
+          border-radius: 1vw;
+          border: 0.2vw solid #3333;
+          background: rgba( 255,255,255, 0.2 );
+          box-shadow: 0.5vw 0.5vw 1vw 0 rgba( 0,0,0, 0.4 );
+          backdrop-filter: blur( 0.5rem );
+          -webkit-backdrop-filter: blur( 0.5rem );
+          &>article {
+            margin-bottom: 0.5vh;
+            width: 100%;
+            height: 8%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+            &:nth-child(1) {
+              background: rgba( 255,255,255, 0.3 );
+              border-bottom: 0.2vw solid #3331;
+            }
+            &>p {
+              font-size: 1vw;
+              font-weight: 600;
+              color: #333;
+              text-align: center;
+              border-right: 0.05vw solid #3332;
+              &:nth-child(1) {
+                width: 20%;
+              }
+              &:nth-child(2) {
+                width: 40%;
+              }
+              &:nth-child(3) {
+                width: 20%;
+              }
+              &:nth-child(4) {
+                width: 20%;
+                border: none;
+              }
+            }
+            &:nth-child(2) {
+              position: relative;
+              &>div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20%;
+                height: 100%;
+                background: url('../img/rank1.png') no-repeat center center/contain;
+              }
+            }
+            &:nth-child(3) {
+              position: relative;
+              &>div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20%;
+                height: 100%;
+                background: url('../img/rank2.png') no-repeat center center/contain;
+              }
+            }
+            &:nth-child(4) {
+              position: relative;
+              &>div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20%;
+                height: 100%;
+                background: url('../img/rank3.png') no-repeat center center/contain;
+              }
+            }
+          }
+        }
+      }
+      &>section:nth-child(2) {
+        width: 20%;
+        height: 90%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+        align-items: flex-end;
+        &>article:nth-child(2) {
+          width: 100%;
+          height: 25%;
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: flex-start;
+          align-items: center;
+          border-radius: 1vw;
+          background: rgba( 50,70,255, 0.7 );
+          box-shadow: 0 1vw 1.5vw 0 rgba( 255,255,255, 0.4 );
+          border: 0.1vw solid rgba( 255, 255, 255, 0.18 );
+          &>article:nth-child(2) {
+            width: 30%;
+            height: 100%;
+            @include flex_center();
+            .user_img_2 {
+              width: 90%;
+              height: 90%;
+              // background: url('../img/obj4.png') no-repeat center center/contain;
+            }
+          }
+          &>article:nth-child(1) {
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: center;
+            &>div {
+              width: 90%;
+              height: 45%;
+              @include flex_center();
+              &>p {
+                font-size: 1.5vw;
+                font-weight: 600;
+                color: #FFF;
+              }
+            }
+          }
+        }
+        &>div {
+          width: 30%;
+          height: 2.2vw;
+          border-radius: 0.5vw;
+          border: 0.3vw solid #333;
+          @include flex_center();
+          pointer-events: all;
+          transition: all 0.3s;
+          cursor: pointer;
+          margin-bottom: 2vh;
+          border-radius: 2vw;
+          &>p {
+            pointer-events: none;
+            font-size: 1.3vw;
+            font-weight: bold;
+            color: #333;
+            transition: all 0.3s;
+          }
+          &:hover {
+            transition: all 0.3s;
+            background: #FFF;
+            border-color: #56F;
+            filter: drop-shadow(0.2vw 0.2vw 0 #333);
+            &>p {
+              color: #56F;
+              transition: all 0.3s;
+            }
+          }
+        }
+      }
+    }
+    .game_area {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0%;
+      transform-style: preserve-3d;
+      left: 0%;
+      perspective: 150vw;
+      transform: rotateX(40deg) translateY(-10vh);
+      @include flex_center();
+      .game_board {
+        width: 95vh;
+        height: 95vh;
+        transform-style: preserve-3d;
+        border-radius: 2vw;
+        background: rgba( 255,255,255, 0.2 );
+        box-shadow: 1vw 1vw 1vw 0 rgba( 0,0,0, 0.4 );
+        backdrop-filter: blur( 0.5rem );
+        -webkit-backdrop-filter: blur( 0.5rem );
+        border: 0.1vw solid rgba( 255, 255, 255, 0.18 );
+        position: relative;
+        transform: rotate(45deg);
+        @include flex_center();
+        &>article:nth-child(1) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 30;
+          &>article {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            &>div {
+              width: 10%;
+              height: 100%;
+              &>div {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                box-shadow: inset 0.1vw 0.1vw 0 #FFF, inset -0.1vw -0.1vw 0 #FFF;
+                border-radius: 0.8vw;
+                position: relative;
+                &>p {
+                  font-size: 1.1vw;
+                  font-weight: 600;
+                  color: #FFF;
+                  filter: drop-shadow(0.1vw 0.1vw 0 #333);
+                }
+                &>article:nth-child(2) {
+                  width: 80%;
+                  height: 30%;
+                  position: absolute;
+                  top: 0%;
+                  left: 0;
+                  display: flex;
+                  flex-flow: row nowrap;
+                  justify-content: space-between;
+                  align-items: center;
+                  transform: rotate(-45deg);
+                  &>div {
+                    position: absolute;
+                    transform-style:flat;
+                    &:nth-child(1) {
+                      width: 70%;
+                      height: 150%;
+                      top: -75%;
+                      left: 35%;
+                      transform: scale(0) rotate(5deg);
+                      background: url("../img/flag-r.png") no-repeat center center/contain;
+                    }
+                    &:nth-child(2) {
+                      width: 60%;
+                      height: 150%;
+                      top: 10%;
+                      right: -10%;
+                      transform: scale(0) rotate(5deg) rotateY(180deg);
+                      z-index: 100;
+                      background: url("../img/villa-r.png") no-repeat center center/contain;
+                    }
+                    &:nth-child(3) {
+                      width: 70%;
+                      height: 150%;
+                      top: -30%;
+                      left: 20%;
+                      transform: scale(0) rotate(5deg);
+                      z-index: 50;
+                      background: url("../img/building-r.png") no-repeat center center/contain;
+                    }
+                    &:nth-child(4) {
+                      width: 150%;
+                      height: 200%;
+                      top: -130%;
+                      left: -40%;
+                      transform: scale(0) rotate(5deg);
+                      background: url("../img/hotel-r.png") no-repeat center center/contain;
+                    }
+                  }
+                } //---- 3번째 줄 깃발 건물
+              } //--- 위치 박스
+            }
+            &:nth-child(2)>div>div {
+              &>article:nth-child(2) {
+                width: 80%;
+                height: 30%;
+                position: absolute;
+                top: 0%;
+                left: 0;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                transform: rotate(-45deg);
+                &>div {
+                  position: absolute;
+                  transform-style:flat;
+                  &:nth-child(1) {
+                    width: 70%;
+                    height: 150%;
+                    top: -75%;
+                    left: 35%;
+                    transform: scale(0) rotate(0deg);
+                    background: url("../img/flag-r.png") no-repeat center center/contain;
+                  }
+                  &:nth-child(2) {
+                    width: 60%;
+                    height: 150%;
+                    top: 20%;
+                    right: -10%;
+                    transform: scale(0) rotate(0deg);
+                    z-index: 100;
+                    background: url("../img/villa-r.png") no-repeat center center/contain;
+                  }
+                  &:nth-child(3) {
+                    width: 70%;
+                    height: 150%;
+                    top: -30%;
+                    left: 20%;
+                    transform: scale(0) rotate(0deg);
+                    z-index: 50;
+                    background: url("../img/building-r.png") no-repeat center center/contain;
+                  }
+                  &:nth-child(4) {
+                    width: 150%;
+                    height: 200%;
+                    top: -130%;
+                    left: -40%;
+                    transform: scale(0) rotate(0deg);
+                    background: url("../img/hotel-r.png") no-repeat center center/contain;
+                  }
+                }
+              } //--- 첫번째 줄 깃발 건물
+            }
+          }
+        }
+        &>article:nth-child(2) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 20;
+          transform: rotate(-90deg);
+          &>article {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            &>div {
+              width: 10%;
+              height: 100%;
+              &>div {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                box-shadow: inset 0.1vw 0.1vw 0 #FFF, inset -0.1vw -0.1vw 0 #FFF;
+                border-radius: 0.8vw;
+                // filter: drop-shadow(0.4vw 0.4vw 0.5vw #333);
+                position: relative;
+                &>p {
+                  font-size: 1.1vw;
+                  font-weight: 600;
+                  color: #FFF;
+                  filter: drop-shadow(0.1vw 0.1vw 0 #333);
+                }
+                &>article:nth-child(2) {
+                  width: 80%;
+                  height: 30%;
+                  position: absolute;
+                  top: 0%;
+                  left: 0;
+                  display: flex;
+                  flex-flow: row nowrap;
+                  justify-content: space-between;
+                  align-items: center;
+                  transform: rotate(40deg);
+                  &>div {
+                    position: absolute;
+                    transform-style:flat;
+                    &:nth-child(1) {
+                      width: 70%;
+                      height: 150%;
+                      top: -110%;
+                      left: 30%;
+                      transform: scale(0) rotate(0deg);
+                      background: url("../img/flag-r.png") no-repeat center center/contain;
+                    }
+                    &:nth-child(2) {
+                      width: 60%;
+                      height: 150%;
+                      top: -100%;
+                      left: 65%;
+                      transform: scale(0) rotate(0deg) rotateY(180deg);
+                      background: url("../img/villa-r.png") no-repeat center center/contain;
+                    }
+                    &:nth-child(3) {
+                      width: 70%;
+                      height: 150%;
+                      top: -60%;
+                      left: 30%;
+                      transform: scale(0) rotate(0deg) rotateY(180deg);
+                      z-index: 50;
+                      background: url("../img/building-r.png") no-repeat center center/contain;
+                    }
+                    &:nth-child(4) {
+                      width: 150%;
+                      height: 200%;
+                      top: -80%;
+                      left: -35%;
+                      z-index: 100;
+                      transform: scale(0) rotate(0deg);
+                      background: url("../img/hotel-r.png") no-repeat center center/contain;
+                    }
+                  }
+                } //--- 2번째 줄 깃발 건물
+              } //--- 위치 박스
+              &:nth-child(1) { z-index: 100; }
+              &:nth-child(2) { z-index: 90; }
+              &:nth-child(3) { z-index: 80; }
+              &:nth-child(4) { z-index: 70; }
+              &:nth-child(5) { z-index: 60; }
+              &:nth-child(6) { z-index: 50; }
+              &:nth-child(7) { z-index: 40; }
+            }
+            .pos_30 {
+              position: relative;
+              &>div>p:nth-child(3) {
+                position: absolute;
+                bottom: -5vh;
+                color: #333;
+                font-size: 1.3vw;
+                font-weight: 900;
+              }
+            }
+            &:nth-child(2)>div>div {
+              &>article:nth-child(2) {
+                width: 80%;
+                height: 30%;
+                position: absolute;
+                top: 0%;
+                left: 0;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                transform: rotate(45deg);
+                &>div {
+                  position: absolute;
+                  transform-style:flat;
+                  &:nth-child(1) {
+                    width: 70%;
+                    height: 150%;
+                    top: -110%;
+                    left: 30%;
+                    transform: scale(0) rotate(0deg);
+                    background: url("../img/flag-r.png") no-repeat center center/contain;
+                  }
+                  &:nth-child(2) {
+                    width: 60%;
+                    height: 150%;
+                    top: -100%;
+                    left: 65%;
+                    transform: scale(0) rotate(0deg) rotateY(180deg);
+                    background: url("../img/villa-r.png") no-repeat center center/contain;
+                  }
+                  &:nth-child(3) {
+                    width: 70%;
+                    height: 150%;
+                    top: -60%;
+                    left: 30%;
+                    transform: scale(0) rotate(0deg) rotateY(180deg);
+                    z-index: 50;
+                    background: url("../img/building-r.png") no-repeat center center/contain;
+                  }
+                  &:nth-child(4) {
+                    width: 150%;
+                    height: 200%;
+                    top: -80%;
+                    left: -35%;
+                    z-index: 100;
+                    transform: scale(0) rotate(0deg);
+                    background: url("../img/hotel-r.png") no-repeat center center/contain;
+                  }
+                }
+              } //--- 4번째 줄 깃발 건물
+            }
+          }
+        }
+        &>article:nth-child(3) {
+          width: 75%;
+          height: 75%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center;
+          transform: rotate(-45deg);
+          perspective: 20vw;
+          z-index: 300;
+          position: relative;
+          &>div {
+            width: 80%;
+            height: 30%;
+            transform: scale(0);
+            transform-style: preserve-3d;
+            &:nth-child(1) {
+              margin-top: 2vw;
+              @include flex_center();
+              position: relative;
+              &>p {
+                font-size: 4vw;
+                font-weight: 900;
+                color: #FFF;
+                -webkit-text-stroke: 1vw #333;
+                text-shadow: 0rem 1vw 1.5vw rgba(33, 33, 33, 0.4);
+              }
+              &>div {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0%;
+                left: 0%;
+                @include flex_center();
+                &>p {
+                  font-size: 4vw;
+                  font-weight: 900;
+                  color: #FFF;
+                  -webkit-text-fill-color: #FFF;
+                }
+              }
+            }
+            &:nth-child(3) {
+              width: 20%;
+              height: 20%;
+              border-radius: 50%;
+              border: 0.5vw solid #FFF;
+              background-color: transparent;
+              @include flex_center();
+              pointer-events: all;
+              cursor: pointer;
+              transition: all 0.2s;
+              filter: drop-shadow(0 0.2vw 0 #333);
+              transform: scale(0);
+              &>p {
+                transition: all 0.2s;
+                font-size: 2vw;
+                font-weight: 900;
+                color: #FFF;
+                pointer-events: none;
+              }
+              &:hover {
+                transition: all 0.2s;
+                border-color: #333;
+                &>p {
+                  transition: all 0.2s;
+                  color: #333;
+                }
+              }
+            }
+          }
+          .dice_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(0);
+            z-index: 100;
+            .dice {
+              width: 10vw;
+              height: 10vw;
+              margin: 5vw;
+              perspective: 40vw;
+              filter: drop-shadow(1vw 1vw 1vw #3338);
+            }
+            .cube {
+              position: relative;
+              width: 10vw;
+              height: 10vw;
+              transform-style: preserve-3d;
+              transform: translateZ(-5vw) rotateX(0) rotateY(0);
+              transition: transform 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+            .side {
+              position: absolute;
+              width: 10vw;
+              height: 10vw;
+              box-sizing: border-box;
+              border: -0.1vw solid rgba(255, 255, 255, 0.25);
+              border-radius: 0.2vw;
+              overflow: hidden;
+              background: #F54;
+              -webkit-backface-visibility: hidden;
+                      backface-visibility: hidden;
+            }
+            .side_1 {
+                transform: translateZ(-5vw) rotateX(180deg);
+              }
+            .side_2 {
+                transform: translateY(-5vw) rotateX(90deg);
+              }
+            .side_3 {
+                transform: translateX(5vw) rotateY(90deg);
+              }
+            .side_4 {
+                transform: translateX(-5vw) rotateY(270deg);
+              }
+            .side_5 {
+                transform: translateY(5vw) rotateX(270deg);
+              }
+            .side_6 {
+                transform: translateZ(5vw);
+              }
+            .dice[data-val="1"] .cube {
+              transform: translateZ(-5vw) rotateX(180deg) rotateY(0deg);
+            }
+            .dice[data-val="2"] .cube {
+              transform: translateZ(-5vw) rotateX(-90deg) rotateY(0deg);
+            }
+            .dice[data-val="3"] .cube {
+              transform: translateZ(-5vw) rotateX(0deg) rotateY(-90deg);
+            }
+            .dice[data-val="4"] .cube {
+              transform: translateZ(-5vw) rotateX(0deg) rotateY(90deg);
+            }
+            .dice[data-val="5"] .cube {
+              transform: translateZ(-5vw) rotateX(90deg) rotateY(0deg);
+            }
+            .dice[data-val="0"] .cube {
+              transition: transform 1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            }
+            .dice_1[data-val="0"] .cube {
+              transform: translateZ(-5vw) rotateX(359deg) rotateY(359deg);
+            }
+            .dice_2[data-val="0"] .cube {
+              transform: translateZ(-5vw) rotateX(-359deg) rotateY(-359deg);
+            }
+            .dot {
+              position: absolute;
+              width: 2vw;
+              height: 2vw;
+              margin: -1vw 0 0 -1vw;
+              border-radius: 1vw;
+              background: #fff;
+              box-shadow: inset 0 0 1vw #3336;
+            }
+            .dot_1, .dot_2, .dot_3 {
+                top: 2vw;
+              }
+            .dot_4, .dot_5, .dot_6 {
+                top: 5vw;
+              }
+            .dot_7, .dot_8, .dot_9 {
+                top: 8vw;
+              }
+            .dot_1, .dot_4, .dot_7 {
+                left: 2vw;
+              }
+            .dot_2, .dot_5, .dot_8 {
+                left: 5vw;
+              }
+            .dot_3, .dot_6, .dot_9 {
+                left: 8vw;
+              }
+          }
+          .dice_double {
+            position: absolute;
+            width: 100%;
+            height: 30%;
+            top: 30%;
+            left: 0;
+            z-index: 80;
+            @include flex_center();
+            &>p {
+              font-size: 5vw;
+              color: rgb(91, 221, 121);
+              font-weight: 900;
+              filter: drop-shadow(0 0.5vw 0 #FFF);
+              transform: translateY(10vh) scale(0);
+            }
+          }
+          .please_login {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            width: 100%;
+            transform: rotateX(-5deg);
+            @include flex_center();
+            transform: scale(1) rotateX(-5deg);
+            &>p {
+              font-size: 10vh;
+              font-weight: 900;
+              color: #FFF;
+              -webkit-text-stroke: 2vh #F54;
+              text-shadow: 0rem 1vw 1.5vw rgba(33, 33, 33, 0.4);
+            }
+            &>div {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0%;
+              left: 0%;
+              @include flex_center();
+              &>p {
+                font-size: 10vh;
+                font-weight: 900;
+                color: #FFF;
+                -webkit-text-fill-color: #FFF;
+              }
+            }
+          }
+        }
+        &>article:nth-child(4) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 0;
+          &>article {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            &>div {
+              width: 15%;
+              height: 100%;
+              background: #56F;
+              box-shadow: inset 0.1vw 0.1vw 0 #FFF, inset -0.1vw -0.1vw 0 #FFF;
+              @include flex_center();
+              z-index: -10;
+              &>p {
+                font-size: 1.8vw;
+                font-weight: 600;
+                color: #FFF;
+                transform: rotate(-45deg);
+              }
+              border-radius: 0.8vw;
+            }
+            &:nth-child(1)>div:first-child {
+              border-top-left-radius: 2vw;
+            }
+            &:nth-child(1)>div:last-child {
+              border-top-right-radius: 2vw;
+            }
+            &:nth-child(2)>div:first-child {
+              border-bottom-left-radius: 2vw;
+            }
+            &:nth-child(2)>div:last-child {
+              border-bottom-right-radius: 2vw;
+            }
+          }
+        }
+        .olympic_mark {
+          width: 95%;
+          height: 25%;
+          position: absolute;
+          bottom: 10%;
+          left: 2.5%;
+          border: 0.2vh solid #333;
+          background: #FFF url("../img/olympic.png") no-repeat 0% center/contain;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: flex-end;
+          align-items: center;
+          transform: scale(0);
+          pointer-events: none;
+          &>p {
+            pointer-events: none;
+            margin-right: 0.2vh;
+            font-size: 0.7vw;
+            color: #333;
+            font-weight: 600;
+          }
+        }
+      }
+    } //--- game_area ---//
+    .user_obj_1 {
+      filter: none;
+      transition: all 0.5s;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      width: 10vh;
+      height: 15vh;
+      position: absolute;
+      z-index: 1000;
+      // background: url('../img/obj3.png') no-repeat center center/contain;
+    }
+    .user_obj_2 {
+      filter: none;
+      transition: all 0.5s;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      width: 10vh;
+      height: 15vh;
+      position: absolute;
+      z-index: 1000;
+      // transform: scale(0.8) translateY(2vh);
+      // background: url('../img/obj4.png') no-repeat center center/contain;
+    }
+    &>article {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 95%;
+      @include flex_center();
+      z-index: 5000;
+      pointer-events: all;
+      transform: scale(0);
+      &>article {
+        width: 45vw;
+        height: 30vw;
+        border-radius: 3vw;
+        background: rgba( 0,0,0, 0.4 );
+        box-shadow: 0.5vw 0.5vw 0vw 0 rgba( 0, 0, 0, 0.6 );
+        backdrop-filter: blur( 0.5rem );
+        -webkit-backdrop-filter: blur( 0.5rem );
+        border: 0.5vw solid rgba( 255, 255, 255, 0.8 );
+      }
+      &:nth-child(6) { //--- city_popup
+        &>article {
+          width: 55vw;
+          height: 40vw;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-around;
+          align-items: center;
+          overflow: hidden;
+          &>article:nth-child(1) {
+            width: 100%;
+            height: 10%;
+            background-color: #56F;
+            @include flex_center();
+            position: relative;
+            &>div:nth-child(1) {
+              width: 100%;
+              height: 100%;
+              @include flex_center();
+              &>p {
+                color: #FFF;
+                font-size: 2.5vw;
+                font-weight: 900;
+                filter: drop-shadow(0.1vw 0.1vw 0.2vw #333);
+              }
+            }
+            &>div:nth-child(2) {
+              position: absolute;
+              top: 0.1vw;
+              right: 0.5vw;
+              border: 0.2vw solid #FFF;
+              width: 3.8vw;
+              height: 3.8vw;
+              border-radius: 0.5vw;
+              background-color: #333A;
+              cursor: pointer;
+              pointer-events: all;
+              @include flex_center();
+              &>i {
+                pointer-events: none;
+                font-size: 2vw;
+                font-weight: 900;
+                color: #FFF;
+              }
+            }
+          }
+          &>article:nth-child(2) {
+            width: 90%;
+            height: 40%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            &>div {
+              pointer-events: all;
+              cursor: pointer;
+              width: 20%;
+              height: 90%;
+              border-radius: 1vw;
+              overflow: hidden;
+              border: 0.3vw solid #FFF;
+              display: flex;
+              flex-flow: column nowrap;
+              justify-content: space-between;
+              align-items: center;
+              overflow: hidden;
+              background-color: #FFF9;
+              &>div:nth-child(1) {
+                pointer-events: none;
+                width: 100%;
+                height: 20%;
+                background-color: #910A;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-end;
+                align-items: center;
+                &>p {
+                  margin-right: 1vw;
+                  font-size: 1.3vw;
+                  color: #FFF;
+                  font-weight: 600;
+                }
+              }
+              &>div:nth-child(2) {
+                pointer-events: none;
+                width: 100%;
+                height: 50%;
+              }
+              &>div:nth-child(3) { 
+                pointer-events: none;
+                width: 90%;
+                height: 20%;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-end;
+                align-items: center;
+                &>p {
+                  color: #F00;
+                  font-weight: 900;
+                  font-size: 1.3vw;
+                }
+              }
+              &:nth-child(1)>div:nth-child(2) {
+                background: url("../img/flag-r.png") no-repeat center center/contain;
+              }
+              &:nth-child(2)>div:nth-child(2) {
+                background: url("../img/villa-r.png") no-repeat center center/contain;
+              }
+              &:nth-child(3)>div:nth-child(2) {
+                background: url("../img/building-r.png") no-repeat center center/contain;
+              }
+              &:nth-child(4)>div:nth-child(2) {
+                background: url("../img/hotel-r.png") no-repeat center center/contain;
+              }
+            }
+            .active_city_card {
+              border-color: #FF3;
+            }
+            .my_city_card {
+              border-color: #F00;
+            }
+          }
+          &>article:nth-child(3) {
+            width: 100%;
+            height: 25%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: center;
+            &>div:nth-child(1) {
+              width: 50%;
+              pointer-events: all;
+              cursor: pointer;
+              height: 50%;
+              border-radius: 1vw;
+              border: 0.4vw solid #56F;
+              background-color: #FFF;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: flex-start;
+              align-items: center;
+              position: relative;
+              &>p {
+                font-size: 2vw;
+                font-weight: 900;
+                color: #56F;
+                margin-left: 1vw;
+                pointer-events: none;
+              }
+              &>div:nth-child(2) {
+                width: 0.1vw;
+                height: 80%;
+                background-color: #333;
+                margin-left: 1vw;
+                margin-right: 1vw;
+                pointer-events: none;
+              }
+              &>div:nth-child(3) {
+                width: 80%;
+                height: 100%;
+                @include flex_center();
+                pointer-events: none;
+                &>p {
+                  font-size: 2vw;
+                  font-weight: 900;
+                  color: #56F;
+                }
+              }
+              &>div:nth-child(4) {
+                position: absolute;
+                width: 90%;
+                height: 6%;
+                top: 47%;
+                left: 5%;
+                background: #F00;
+                opacity: 0;
+              }
+            }
+            &>div:nth-child(2) {
+              width: 40%;
+              height: 40%;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-around;
+              align-items: center;
+              &>p {
+                width: 50%;
+                font-size: 1.6vw;
+                font-weight: 600;
+                color: #FFF;
+                &:nth-child(1) {
+                  width: 30%;
+                }
+              }
+              &>i {
+                width: 20%;
+                font-size: 2vw;
+                font-weight: 900;
+                color: #FFF6;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(7) { //--- island_popup
+        &>article {
+          width: 55vw;
+          height: 40vw;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-around;
+          align-items: center;
+          overflow: hidden;
+          &>article:nth-child(1) {
+            width: 100%;
+            height: 10%;
+            background-color: #56F;
+            @include flex_center();
+            position: relative;
+            &>div:nth-child(1) {
+              width: 100%;
+              height: 100%;
+              @include flex_center();
+              &>p {
+                color: #FFF;
+                font-size: 2.5vw;
+                font-weight: 900;
+                filter: drop-shadow(0.1vw 0.1vw 0.2vw #333);
+              }
+            }
+            &>div:nth-child(2) {
+              position: absolute;
+              top: 0.1vw;
+              right: 0.5vw;
+              border: 0.2vw solid #FFF;
+              width: 3.8vw;
+              height: 3.8vw;
+              border-radius: 0.5vw;
+              background-color: #333A;
+              cursor: pointer;
+              pointer-events: all;
+              @include flex_center();
+              &>i {
+                pointer-events: none;
+                font-size: 2vw;
+                font-weight: 900;
+                color: #FFF;
+              }
+            }
+          }
+          &>article:nth-child(2) {
+            width: 80%;
+            height: 40%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+            &>div:nth-child(1) {
+              width: 40%;
+              height: 90%;
+              &>div {
+                width: 100%;
+                height: 100%;
+                background: url("../img/island-flag-r.png") no-repeat center center/contain;
+              }
+            }
+            &>div:nth-child(2) {
+              width: 40%;
+              height: 60%;
+              border-radius: 1vw;
+              overflow: hidden;
+              border: 0.3vw solid #FFF;
+              display: flex;
+              flex-flow: column nowrap;
+              justify-content: space-around;
+              align-items: center;
+              overflow: hidden;
+              background-color: #FFF9;
+              &>article {
+                width: 100%;
+                height: 20%;
+                @include flex_center();
+                &>p {
+                  font-size: 1.6vw;
+                  font-weight: 900;
+                  color: #F00;
+                }
+              }
+              &>div {
+                pointer-events: none;
+                width: 100%;
+                height: 20%;
+                background-color: #333A;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-around;
+                align-items: center;
+                padding-left: 10%;
+                padding-right: 10%;
+                &:nth-child(2) {
+                  background-color: #910B;
+                }
+                &>p {
+                  width: 30%;
+                  font-size: 1.3vw;
+                  color: #FFF;
+                  font-weight: 600;
+                  text-align: center;
+                }
+                &>i {
+                  width: 20%;
+                  color: #FFF5;
+                  font-size: 1.5vw;
+                  text-align: center;
+                }
+              }
+            }
+            .active_city_card {
+              border-color: #FF3;
+            }
+            .my_city_card {
+              border-color: #F00;
+            }
+          }
+          &>article:nth-child(3) {
+            width: 100%;
+            height: 25%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: center;
+            &>div:nth-child(1) {
+              width: 50%;
+              pointer-events: all;
+              cursor: pointer;
+              height: 50%;
+              border-radius: 1vw;
+              border: 0.4vw solid #56F;
+              background-color: #FFF;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: flex-start;
+              align-items: center;
+              position: relative;
+              &>p {
+                font-size: 2vw;
+                font-weight: 900;
+                color: #56F;
+                margin-left: 1vw;
+                pointer-events: none;
+              }
+              &>div:nth-child(2) {
+                width: 0.1vw;
+                height: 80%;
+                background-color: #333;
+                margin-left: 1vw;
+                margin-right: 1vw;
+                pointer-events: none;
+              }
+              &>div:nth-child(3) {
+                width: 80%;
+                height: 100%;
+                @include flex_center();
+                pointer-events: none;
+                &>p {
+                  font-size: 2vw;
+                  font-weight: 900;
+                  color: #56F;
+                }
+              }
+              &>div:nth-child(4) {
+                position: absolute;
+                width: 90%;
+                height: 6%;
+                top: 47%;
+                left: 5%;
+                background: #F00;
+                opacity: 0;
+              }
+            }
+            &>div:nth-child(2) {
+              width: 60%;
+              height: 40%;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-around;
+              align-items: center;
+              &>p {
+                width: 40%;
+                font-size: 1.6vw;
+                font-weight: 600;
+                text-align: center;
+                color: #FFF;
+                &:nth-child(1) {
+                  width: 40%;
+                }
+              }
+              &>i {
+                text-align: center;
+                width: 20%;
+                font-size: 2vw;
+                font-weight: 900;
+                color: #FFF6;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(8) { //--- desert_island_pop
+        &>article {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-around;
+          align-items: center;
+          &>article {
+            width: 90%;
+            height: 65%;
+            display: flex;
+            &:nth-child(1) {
+              flex-flow: column nowrap;
+              justify-content: space-around;
+              align-items: center;
+              &>div {
+                width: 100%;
+                height: 45%;
+                @include flex_center();
+                &>p {
+                  color: #FFF;
+                  font-size: 2.3vw;
+                  font-weight: 900;
+                }
+              }
+            }
+            &:nth-child(2) {
+              height: 25%;
+              flex-flow: row nowrap;
+              justify-content: space-around;
+              align-items: center;
+              &>span {
+                display: none;
+              }
+              &>div {
+                width: 40%;
+                height: 90%;
+                @include flex_center();
+                border-radius: 2vw;
+                border: 0.3vw solid #FFF;
+                pointer-events: all;
+                cursor: pointer;
+                position: relative;
+                background-color: #333A;
+                &>p {
+                  pointer-events: none;
+                  color: #FFF;
+                  font-size: 2.3vw;
+                  font-weight: 900;
+                }
+                &>div {
+                  position: absolute;
+                  width: 90%;
+                  height: 6%;
+                  background-color: #F00;
+                  top: 47%;
+                  left: 5%;
+                  transform: scale(0);
+                }
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(9) { //--- olympic_popup
+
+      }
+      &:nth-child(10) { //--- travel_popup
+        
+      }
+      &:nth-child(11) { //--- tax_popup
+        &>article {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-around;
+          align-items: center;
+          &>article {
+            width: 90%;
+            height: 70%;
+            &>div {
+              width: 100%;
+              height: 45%;
+              @include flex_center();
+              &>p {
+                color: #FFF;
+                font-size: 3vw;
+                font-weight: 900;
+              }
+              &:nth-child(2) {
+                &>p {
+                  font-size: 5vw;
+                  color: #F54;
+                  filter: drop-shadow(0.2vw 0.2vw 0.2vw #FFFA);
+                }
+              }
+            }
+          }
+          .close_popup {
+            width: 25%;
+            height: 15%;
+            border-radius: 1vw;
+            background-color: #FFF;
+            pointer-events: all;
+            cursor: pointer;
+            @include flex_center();
+            &>p {
+              pointer-events: none;
+              color: #333;
+              font-size: 2vw;
+              font-weight: 900;
+            }
+          }
+        }
+      }
+      &:nth-child(12) { //--- take_popup
+        // transform: scale(1);
+        &>article {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-around;
+          align-items: center;
+          overflow: hidden;
+          &>div:nth-child(1) {
+            width: 95%;
+            height: 15%;
+            @include flex_center();
+            background-color: #56F;
+            border-radius: 1vw;
+            &>p {
+              color: #FFF;
+              font-size: 2vw;
+              font-weight: 900;
+            }
+          }
+          &>div:nth-child(2) {
+            width: 95%;
+            height: 15%;
+            border-radius: 1vw;
+            background-color: #FFF;
+            @include flex_center();
+            &>p {
+              margin-left: 1vw;
+              font-size: 2vw;
+              font-weight: 900;
+              color: #56F;
+            }
+          }
+          &>p:nth-child(3) {
+            font-size: 1.2vw;
+            font-weight: 600;
+            color: #FFF;
+            letter-spacing: 0.1vw;
+            word-spacing: 0.3vw;
+          }
+          &>article:nth-child(4) {
+            width: 90%;
+            height: 30%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            &>div {
+              width: 60%;
+              height: 60%;
+              border-radius: 1vw;
+              background-color: rgb(255, 201, 51);
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-around;
+              align-items: center;
+              pointer-events: all;
+              position: relative;
+              cursor: pointer;
+              &>div:nth-child(2) {
+                pointer-events: none;
+                width: 0.1vw;
+                height: 70%;
+                background-color: #3338;
+              }
+              &>div:nth-child(4) {
+                pointer-events: none;
+                position: absolute;
+                width: 90%;
+                height: 6%;
+                top: 47%;
+                left: 5%;
+                background: #F00;
+                opacity: 0;
+              }
+              &>p {
+                width: 60%;
+                pointer-events: none;
+                color: #FFF;
+                font-size: 2.3vw;
+                font-weight: 900;
+                text-align: center;
+                &:nth-child(1) {
+                  width: 30%;
+                }
+              }
+              &:nth-child(2) {
+                width: 30%;
+                background-color: #FFF;
+                @include flex_center();
+                &>p {
+                  pointer-events: none;
+                  color: #333;
+                  font-size: 2.2vw;
+                  font-weight: 900;
+                }
+              }
+            }
+          }
+          &>div:nth-child(5) {
+            width: 90%;
+            height: 15%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+            padding-left: 5vw;
+            padding-right: 5vw;
+            border-top: 0.5vw dotted #FFF3;
+            &>p {
+              color: #FFF;
+              font-size: 1.5vw;
+              font-weight: 900;
+            }
+            &>i {
+              color: #FFF8;
+              font-size: 1.5vw;
+              font-weight: 900;
+            }
+          }
+        }
+      }
+      &:nth-child(13) { //--- error_popup
+        &>article {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: center;
+          &>p {
+            font-size: 3vw;
+            font-weight: 900;
+            color: #FFF;
+            filter: drop-shadow(0.2vw 0.2vw 0.1vw #F00);
+            margin-bottom: 3vh;
+          }
+          &>div {
+            margin-top: 3vh;
+            pointer-events: all;
+            @include flex_center();
+            width: 20%;
+            height: 15%;
+            border-radius: 2vw;
+            border: 0.3vw solid #FFF;
+            background-color: #333;
+            cursor: pointer;
+            &>p {
+              pointer-events: none;
+              font-size: 2vw;
+              font-weight: 900;
+              color: #FFF;
+            }
+          }
+        }
+      }
+      &:nth-child(14) { //--- end_popup
+        top: 2.5%;
+        &>article {
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: center;
+          box-shadow: none;
+          border: none;
+          &>div:nth-child(1) {
+            width: 80%;
+            height: 20%;
+            margin-top: 2vw;
+            @include flex_center();
+            position: relative;
+            &>p {
+              font-size: 6vw;
+              font-weight: 900;
+              color: #FFF;
+              -webkit-text-stroke: 1vw #56F;
+              text-shadow: 0rem 1vw 1.5vw rgba(33, 33, 33, 0.4);
+            }
+            &>div {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0%;
+              left: 0%;
+              @include flex_center();
+              &>p {
+                font-size: 6vw;
+                font-weight: 900;
+                color: #FFF;
+                -webkit-text-fill-color: #FFF;
+              }
+            }
+          }
+          &>div:nth-child(2) {
+            width: 80%;
+            height: 25%;
+            margin-top: 2vw;
+            @include flex_center();
+            position: relative;
+            &>p {
+              font-size: 10vw;
+              font-weight: 900;
+              color: #FFF;
+              -webkit-text-stroke: 1vw #F00;
+              text-shadow: 0rem 1vw 1.5vw rgba(33, 33, 33, 0.4);
+              font-style: italic;
+            }
+            &>div {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0%;
+              left: 0%;
+              @include flex_center();
+              &>p {
+                font-size: 10vw;
+                font-weight: 900;
+                color: #FFF;
+                -webkit-text-fill-color: #FFF;
+                font-style: italic;
+              }
+            }
+          }
+          &>div:nth-child(3) {
+            width: 20%;
+            height: 8%;
+            border-radius: 2vw;
+            border: 0.3vw solid #FFF;
+            background-color: #333;
+            @include flex_center();
+            pointer-events: all;
+            cursor: pointer;
+            margin-top: 10vh;
+            &>p {
+              pointer-events: none;
+              font-size: 3vw;
+              color: #FFF;
+              font-weight: 900;
+            }
+          }
+        }
+      }
+      &:nth-child(15) { //--- login_popup
+        &>article {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center;
+          padding: 2vh;
+          &>article:nth-child(1) {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            align-items: center;
+            &>p {
+              font-weight: 900;
+              font-size: 1.5vw;
+              color: #FFF;
+            }
+            &>article {
+              margin-top: 2vh;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-between;
+              align-items: baseline;
+              width: 100%;
+              height: 90%;
+              &>div {
+                width: 18%;
+                height: 90%;
+                border-radius: 2vw;
+                border: 0.2vw solid #FFF;
+                @include flex_center();
+                pointer-events: all;
+                cursor: pointer;
+                &>div {
+                  pointer-events: none;
+                  width: 90%;
+                  height: 90%;
+                  background: url("../img/obj1.png") no-repeat center center/contain;
+                }
+                &:nth-child(2)>div { background: url("../img/obj2.png") no-repeat center center/contain; }
+                &:nth-child(3)>div { background: url("../img/obj3.png") no-repeat center center/contain; }
+                &:nth-child(4)>div { background: url("../img/obj4.png") no-repeat center center/contain; }
+                &:nth-child(5)>div { background: url("../img/obj5.png") no-repeat center center/contain; }
+              }
+            }
+          }
+          &>article:nth-child(2) {
+            width: 100%;
+            height: 20%;
+            position: relative;
+            &>input {
+              position: absolute;
+              width: 50%;
+              height: 90%;
+              left: 25%;
+              top: 5%;
+              border: 0.2vw solid #FFF;
+              border-radius: 1vw;
+              font-size: 1.7vw;
+              font-weight: 600;
+              background-color: #333;
+              text-align: right;
+              padding-right: 2vh;
+              pointer-events: all;
+              color: #FFF;
+              &:focus {
+                border-color: #FF3;
+                color: #FF3;
+              }
+            }
+          }
+          &>article:nth-child(3) {
+            width: 100%;
+            height: 20%;
+            @include flex_center();
+            &>div {
+              width: 30%;
+              height: 80%;
+              border: 0.3vw solid #FFF;
+              border-radius: 5vw;
+              @include flex_center();
+              background-color: #333;
+              pointer-events: all;
+              cursor: pointer;
+              &>p {
+                pointer-events: none;
+                font-size: 2vw;
+                font-weight: 900;
+                color: #FFF;
+              }
+            }
+          }
+        }
+      }
+    }
+    .copy_game_area {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0%;
+      transform-style: preserve-3d;
+      left: 0%;
+      perspective: 150vw;
+      z-index: 60000;
+      transform: rotateX(40deg) translateY(-10vh) scale(0);
+      @include flex_center();
+      pointer-events: all;
+      &>section {
+        width: 100vh;
+        height: 100vh;
+        // overflow: hidden;
+        transform-style: preserve-3d;
+        border-radius: 2vw;
+        background: rgba( 100,100,100, 0.2 );
+        box-shadow: 1vw 1vw 1vw 0 rgba( 0,0,0, 0.4 );
+        backdrop-filter: blur( 0.5rem );
+        -webkit-backdrop-filter: blur( 0.5rem );
+        border: 0.1vw solid rgba( 255, 255, 255, 0.18 );
+        position: relative;
+        transform: rotate(45deg);
+        @include flex_center();
+        &>article:nth-child(1) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 30;
+          &>article {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            &>div {
+              width: 10%;
+              height: 100%;
+              cursor: pointer;
+              &>div {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                box-shadow: inset 0.1vw 0.1vw 0 #FFF, inset -0.1vw -0.1vw 0 #FFF;
+                border-radius: 0.8vw;
+                position: relative;
+                &>p {
+                  font-size: 1.1vw;
+                  font-weight: 600;
+                  color: #FFF;
+                  filter: drop-shadow(0.1vw 0.1vw 0 #333);
+                }
+                &>article:nth-child(2) {
+                  width: 80%;
+                  height: 30%;
+                  position: absolute;
+                  top: 0%;
+                  left: 0;
+                  display: flex;
+                  flex-flow: row nowrap;
+                  justify-content: space-between;
+                  align-items: center;
+                  transform: rotate(-45deg);
+                  &>div {
+                    position: absolute;
+                    transform-style:flat;
+                    &:nth-child(1) {
+                      width: 70%;
+                      height: 150%;
+                      top: -75%;
+                      left: 35%;
+                      transform: scale(0) rotate(5deg);
+                      background: url("../img/flag-r.png") no-repeat center center/contain;
+                    }
+                    &:nth-child(2) {
+                      width: 60%;
+                      height: 150%;
+                      top: 10%;
+                      right: -10%;
+                      transform: scale(0) rotate(5deg) rotateY(180deg);
+                      z-index: 100;
+                      background: url("../img/villa-r.png") no-repeat center center/contain;
+                    }
+                    &:nth-child(3) {
+                      width: 70%;
+                      height: 150%;
+                      top: -30%;
+                      left: 20%;
+                      transform: scale(0) rotate(5deg);
+                      z-index: 50;
+                      background: url("../img/building-r.png") no-repeat center center/contain;
+                    }
+                    &:nth-child(4) {
+                      width: 150%;
+                      height: 200%;
+                      top: -130%;
+                      left: -40%;
+                      transform: scale(0) rotate(5deg);
+                      background: url("../img/hotel-r.png") no-repeat center center/contain;
+                    }
+                  }
+                } //---- 3번째 줄 깃발 건물
+              } //--- 위치 박스
+            }
+            &:nth-child(2)>div {
+              cursor: pointer;
+            }
+            &:nth-child(2)>div>div {
+              &>article:nth-child(2) {
+                width: 80%;
+                height: 30%;
+                position: absolute;
+                top: 0%;
+                left: 0;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                transform: rotate(-45deg);
+                &>div {
+                  position: absolute;
+                  transform-style:flat;
+                  &:nth-child(1) {
+                    width: 70%;
+                    height: 150%;
+                    top: -75%;
+                    left: 35%;
+                    transform: scale(0) rotate(0deg);
+                    background: url("../img/flag-r.png") no-repeat center center/contain;
+                  }
+                  &:nth-child(2) {
+                    width: 60%;
+                    height: 150%;
+                    top: 20%;
+                    right: -10%;
+                    transform: scale(0) rotate(0deg);
+                    z-index: 100;
+                    background: url("../img/villa-r.png") no-repeat center center/contain;
+                  }
+                  &:nth-child(3) {
+                    width: 70%;
+                    height: 150%;
+                    top: -30%;
+                    left: 20%;
+                    transform: scale(0) rotate(0deg);
+                    z-index: 50;
+                    background: url("../img/building-r.png") no-repeat center center/contain;
+                  }
+                  &:nth-child(4) {
+                    width: 150%;
+                    height: 200%;
+                    top: -130%;
+                    left: -40%;
+                    transform: scale(0) rotate(0deg);
+                    background: url("../img/hotel-r.png") no-repeat center center/contain;
+                  }
+                }
+              } //--- 첫번째 줄 깃발 건물
+            }
+          }
+        }
+        &>article:nth-child(2) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 20;
+          transform: rotate(-90deg);
+          &>article {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            &>div {
+              width: 10%;
+              height: 100%;
+              cursor: pointer;
+              &>div {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                box-shadow: inset 0.1vw 0.1vw 0 #FFF, inset -0.1vw -0.1vw 0 #FFF;
+                border-radius: 0.8vw;
+                // filter: drop-shadow(0.4vw 0.4vw 0.5vw #333);
+                position: relative;
+                &>p {
+                  font-size: 1.1vw;
+                  font-weight: 600;
+                  color: #FFF;
+                  filter: drop-shadow(0.1vw 0.1vw 0 #333);
+                }
+                &>article:nth-child(2) {
+                  width: 80%;
+                  height: 30%;
+                  position: absolute;
+                  top: 0%;
+                  left: 0;
+                  display: flex;
+                  flex-flow: row nowrap;
+                  justify-content: space-between;
+                  align-items: center;
+                  transform: rotate(40deg);
+                  &>div {
+                    position: absolute;
+                    transform-style:flat;
+                    &:nth-child(1) {
+                      width: 70%;
+                      height: 150%;
+                      top: -110%;
+                      left: 30%;
+                      transform: scale(0) rotate(0deg);
+                      background: url("../img/flag-r.png") no-repeat center center/contain;
+                    }
+                    &:nth-child(2) {
+                      width: 60%;
+                      height: 150%;
+                      top: -100%;
+                      left: 65%;
+                      transform: scale(0) rotate(0deg) rotateY(180deg);
+                      background: url("../img/villa-r.png") no-repeat center center/contain;
+                    }
+                    &:nth-child(3) {
+                      width: 70%;
+                      height: 150%;
+                      top: -60%;
+                      left: 30%;
+                      transform: scale(0) rotate(0deg) rotateY(180deg);
+                      z-index: 50;
+                      background: url("../img/building-r.png") no-repeat center center/contain;
+                    }
+                    &:nth-child(4) {
+                      width: 150%;
+                      height: 200%;
+                      top: -80%;
+                      left: -35%;
+                      z-index: 100;
+                      transform: scale(0) rotate(0deg);
+                      background: url("../img/hotel-r.png") no-repeat center center/contain;
+                    }
+                  }
+                } //--- 2번째 줄 깃발 건물
+              } //--- 위치 박스
+              &:nth-child(1) { z-index: 100; }
+              &:nth-child(2) { z-index: 90; }
+              &:nth-child(3) { z-index: 80; }
+              &:nth-child(4) { z-index: 70; }
+              &:nth-child(5) { z-index: 60; }
+              &:nth-child(6) { z-index: 50; }
+              &:nth-child(7) { z-index: 40; }
+            }
+            &:nth-child(2)>div {
+              cursor: pointer;
+            }
+            &:nth-child(2)>div>div {
+              &>article:nth-child(2) {
+                width: 80%;
+                height: 30%;
+                position: absolute;
+                top: 0%;
+                left: 0;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                transform: rotate(45deg);
+                &>div {
+                  position: absolute;
+                  transform-style:flat;
+                  &:nth-child(1) {
+                    width: 70%;
+                    height: 150%;
+                    top: -110%;
+                    left: 30%;
+                    transform: scale(0) rotate(0deg);
+                    background: url("../img/flag-r.png") no-repeat center center/contain;
+                  }
+                  &:nth-child(2) {
+                    width: 60%;
+                    height: 150%;
+                    top: -100%;
+                    left: 65%;
+                    transform: scale(0) rotate(0deg) rotateY(180deg);
+                    background: url("../img/villa-r.png") no-repeat center center/contain;
+                  }
+                  &:nth-child(3) {
+                    width: 70%;
+                    height: 150%;
+                    top: -60%;
+                    left: 30%;
+                    transform: scale(0) rotate(0deg) rotateY(180deg);
+                    z-index: 50;
+                    background: url("../img/building-r.png") no-repeat center center/contain;
+                  }
+                  &:nth-child(4) {
+                    width: 150%;
+                    height: 200%;
+                    top: -80%;
+                    left: -35%;
+                    z-index: 100;
+                    transform: scale(0) rotate(0deg);
+                    background: url("../img/hotel-r.png") no-repeat center center/contain;
+                  }
+                }
+              } //--- 4번째 줄 깃발 건물
+            }
+          }
+        }
+        &>article:nth-child(3) {
+          display: none;
+        }
+        &>article:nth-child(4) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 0;
+          &>article {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            &>div {
+              width: 15%;
+              height: 100%;
+              background: #56F;
+              box-shadow: inset 0.1vw 0.1vw 0 #FFF, inset -0.1vw -0.1vw 0 #FFF;
+              @include flex_center();
+              cursor: pointer;
+              z-index: -10;
+              &>p {
+                font-size: 1.8vw;
+                font-weight: 600;
+                color: #FFF;
+                transform: rotate(-45deg);
+              }
+              border-radius: 0.8vw;
+            }
+            &:nth-child(1)>div:first-child {
+              border-top-left-radius: 2vw;
+            }
+            &:nth-child(1)>div:last-child {
+              border-top-right-radius: 2vw;
+            }
+            &:nth-child(2)>div:first-child {
+              border-bottom-left-radius: 2vw;
+            }
+            &:nth-child(2)>div:last-child {
+              border-bottom-right-radius: 2vw;
+            }
+          }
+        }
+        .olympic_mark {
+          width: 95%;
+          height: 25%;
+          position: absolute;
+          bottom: 10%;
+          left: 2.5%;
+          border: 0.2vh solid #333;
+          background: #FFF url("../img/olympic.png") no-repeat 0% center/contain;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: flex-end;
+          align-items: center;
+          transform: scale(0);
+          pointer-events: none;
+          &>p {
+            pointer-events: none;
+            margin-right: 0.2vh;
+            font-size: 0.7vw;
+            color: #333;
+            font-weight: 600;
+          }
+        }
+      }
+      &>article { //---- 지도 카피 띄울때 문구
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        &>div:nth-child(1) {
+          width: 80%;
+          height: 20%;
+          @include flex_center();
+          &>p {
+            font-size: 2vw;
+            font-weight: 900;
+            color: #FFF;
+            filter: drop-shadow(0.2vw 0.2vw 0 #000);
+          }
+        }
+        &>div:nth-child(2) {
+          width: 100%;
+          height: 40%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-around;
+          align-items: center;
+          border-top: 0.5vw dotted #FFF3;
+          &>p {
+            font-size: 4vw;
+            font-weight: 900;
+            color: #FFF;
+            filter: drop-shadow(0.2vw 0.2vw 0 #F00);
+          }
+          &>div {
+            width: 30%;
+            height: 40%;
+            border-radius: 1vw;
+            border: 0.3vw solid #FFF;
+            @include flex_center();
+            position: relative;
+            pointer-events: all;
+            cursor: pointer;
+            &>p {
+              pointer-events: none;
+              font-size: 3vw;
+              font-weight: 900;
+              color: #FFF;
+            }
+            &>div {
+              pointer-events: none;
+              position: absolute;
+              top: 47%;
+              left: 5%;
+              width: 90%;
+              height: 6%;
+              background-color: #F00;
+              transform: scale(0);
+            }
+          }
+        }
+      }
+    } //--- copy_game_area ---//
+    .hidden_popup {
+      display: none;
+    }
+  } //--- body ---//
+} //--- html ---//

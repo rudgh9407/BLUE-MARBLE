@@ -1,0 +1,361 @@
+doctype html
+html(lang="KO")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no")
+    link(rel="apple-touch-icon" sizes="57x57" href="../img/favicon/apple-icon-57x57.png")
+    link(rel="apple-touch-icon" sizes="60x60" href="../img/favicon/apple-icon-60x60.png")
+    link(rel="apple-touch-icon" sizes="72x72" href="../img/favicon/apple-icon-72x72.png")
+    link(rel="apple-touch-icon" sizes="76x76" href="../img/favicon/apple-icon-76x76.png")
+    link(rel="apple-touch-icon" sizes="114x114" href="../img/favicon/apple-icon-114x114.png")
+    link(rel="apple-touch-icon" sizes="120x120" href="../img/favicon/apple-icon-120x120.png")
+    link(rel="apple-touch-icon" sizes="144x144" href="../img/favicon/apple-icon-144x144.png")
+    link(rel="apple-touch-icon" sizes="152x152" href="../img/favicon/apple-icon-152x152.png")
+    link(rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-icon-180x180.png")
+    link(rel="icon" type="image/png" sizes="192x192"  href="../img/favicon/android-icon-192x192.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="96x96" href="../img/favicon/favicon-96x96.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png")
+    link(rel="manifest" href="../img/favicon/manifest.json")
+    meta(name="msapplication-TileColor" content="#ffffff")
+    meta(name="msapplication-TileImage" content="../img/favicon/ms-icon-144x144.png")
+    meta(name="theme-color" content="#ffffff")
+    title LINE MARBLE
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css")
+    link(rel="stylesheet", href="../css/marble.css")
+    script(type="text/javascript", src="../js/data.json")
+    script(type="text/javascript", src="../js/marble.js")
+  body
+    section.top_area
+      section
+        article.user_area_1
+          article
+            .user_img_1 
+          article 
+            div 
+              p.user_name_1
+            div 
+              p.user_money_1
+        div.btn_login_1
+          p 로그인
+      section.top_card_area
+        div
+          p 본 사이트는 비상업적으로 제작되었습니다.
+        div
+          p HELLO PARK !!
+    section.bottom_area
+      section 
+        p 순위표
+        article.rank_list 
+          article 
+            p 순위
+            p 닉네임 
+            p 승
+            p 패
+          //- 반복문
+          each value, index in list
+            article 
+              p=index+1
+              p=value.name 
+              p=value.win
+              p=value.loss
+      section
+        div.btn_login_2
+          p 로그인
+        article.user_area_2
+          article 
+            div 
+              p.user_name_2
+            div 
+              p.user_money_2
+          article
+            .user_img_2
+    section.game_area
+      section.game_board
+        article
+          article.board_line_1 
+            div.pos_17
+            div.pos_18
+            div.pos_19
+            div.pos_20
+            div.pos_21
+            div.pos_22
+            div.pos_23
+          article.board_line_2
+            div.pos_7
+            div.pos_6
+            div.pos_5
+            div.pos_4
+            div.pos_3
+            div.pos_2
+            div.pos_1
+        article
+          article.board_line_3
+            div.pos_9
+            div.pos_10
+            div.pos_11
+            div.pos_12
+            div.pos_13
+            div.pos_14
+            div.pos_15
+          article.board_line_4
+            div.pos_31
+            div.pos_30
+            div.pos_29
+            div.pos_28
+            div.pos_27
+            div.pos_26
+            div.pos_25
+        article 
+          div.game_title
+            p 라인마블
+            div
+              p 라인마블
+          div.dice_container
+            div.dice.dice_1
+              div.cube
+                div.side.side_1
+                  span.dot.dot_5
+                div.side.side_2
+                  span.dot.dot_3
+                  span.dot.dot_7
+                div.side.side_3
+                  span.dot.dot_3
+                  span.dot.dot_5
+                  span.dot.dot_7
+                div.side.side_4
+                  span.dot.dot_1
+                  span.dot.dot_3
+                  span.dot.dot_7
+                  span.dot.dot_9
+                div.side.side_5
+                  span.dot.dot_1
+                  span.dot.dot_3
+                  span.dot.dot_5
+                  span.dot.dot_7
+                  span.dot.dot_9
+                div.side.side_6
+                  span.dot.dot_1
+                  span.dot.dot_4
+                  span.dot.dot_7
+                  span.dot.dot_3
+                  span.dot.dot_6
+                  span.dot.dot_9
+            div.dice.dice_2
+              div.cube
+                div.side.side_1
+                  span.dot.dot_5
+                div.side.side_2
+                  span.dot.dot_3
+                  span.dot.dot_7
+                div.side.side_3
+                  span.dot.dot_3
+                  span.dot.dot_5
+                  span.dot.dot_7
+                div.side.side_4
+                  span.dot.dot_1
+                  span.dot.dot_3
+                  span.dot.dot_7
+                  span.dot.dot_9
+                div.side.side_5
+                  span.dot.dot_1
+                  span.dot.dot_3
+                  span.dot.dot_5
+                  span.dot.dot_7
+                  span.dot.dot_9
+                div.side.side_6
+                  span.dot.dot_1
+                  span.dot.dot_4
+                  span.dot.dot_7
+                  span.dot.dot_3
+                  span.dot.dot_6
+                  span.dot.dot_9
+          div.btn_roll
+            p ROLL
+          article.dice_double 
+            p DOUBLE
+          div.please_login
+            p 로그인 해주세요
+            div 
+              p 로그인 해주세요
+        article
+          article
+            div.pos_16
+              p 올림픽
+            div.pos_24
+              p 세계여행
+          article 
+            div.pos_8
+              p 무인도
+            div.pos_0
+              p 출발
+
+    div.user_obj_1
+    div.user_obj_2
+    article.city_popup 
+      article
+        article.city_popup_color
+          div 
+            p.city_popup_name
+          div.city_popup_close 
+            i.xi-close
+        article.city_popup_list
+          div
+            div 
+              p 땅값
+            div
+            div 
+              p.popup_land_price
+          div
+            div 
+              p 빌라
+            div
+            div 
+              p.popup_villa_price
+          div
+            div 
+              p 빌딩
+            div
+            div 
+              p.popup_building_price
+          div
+            div 
+              p 호텔
+            div
+            div 
+              p.popup_hotel_price
+        article
+          div.city_popup_buy
+            p 구매 
+            div 
+            div 
+              p.city_popup_total
+            div
+          div 
+            p 통행료
+            i.xi-play
+            p.city_popup_pass
+    article.island_popup 
+      article
+        article.island_popup_color
+          div 
+            p.island_popup_name
+          div.island_popup_close 
+            i.xi-close
+        article.island_popup_list
+          div 
+            div.island_popup_img
+          div.island_popup_type
+            article
+              p 통행료
+            div 
+              p 땅값
+              i.xi-play
+              p 8.0만
+            div 
+              p 파라솔
+              i.xi-play
+              p 16.0만
+            div
+              p 방갈로
+              i.xi-play
+              p 32.0만
+        article
+          div.island_popup_buy
+            p 구매
+            div 
+            div 
+              p.island_popup_total 8.0만
+            div
+          div 
+            p 구매 후 남는 마블
+            i.xi-play
+            p.island_popup_after
+    article.desert_island_popup 
+      article
+        div.close_popup
+          p 닫기
+    article.olympic_popup 
+      article
+        div.close_popup
+          p 닫기
+    article.travel_popup
+      article
+        div.close_popup
+          p 닫기
+    article.tax_popup
+      article
+        div.close_popup
+          p 닫기
+    article.take_popup
+      article
+        div
+          p 도시 인수
+        div
+          p.take_city 서울
+          p 인수할까요?
+        p 주의: 건설비용의 2배지불
+        article 
+          div.take_popup_btn
+            p 인수
+            div
+            p.take_price 130.5만
+            div
+          div.take_popup_close
+            p 취소
+        div 
+          p 인수 후 남는 마블
+          i.xi-play 
+          p.take_after_price 550.5만
+    article.error_popup 
+      article 
+        p.error_text 보유중인 도시가 없습니다!!
+        div.error_close
+          p 닫기
+    article.end_popup 
+      article
+        div 
+          p 축하합니다!
+          div
+            p 축하합니다!
+        div
+          p.end_user USER 1 승리!
+          div
+            p.end_user USER 1 승리!
+        div.end_popup_close
+          p 닫기
+    article.login_popup
+      article 
+        article
+          p 캐릭터 선택
+          article
+            div.choice_img
+              div
+            div.choice_img 
+              div
+            div.choice_img 
+              div
+            div.choice_img
+              div
+            div.choice_img
+              div
+        article
+          input#login_1(type="text", name="id_1", placeholder="닉네임을 입력해주세요." maxLength="8")
+          input#login_2(type="text", name="id_2", placeholder="닉네임을 입력해주세요." maxLength="8")
+        article 
+          div.login_btn
+            p 로그인
+    form.hidden_popup(method="post")
+      input#win_name(type="text", name="win_name")
+      input#loss_name(type="text", name="loss_name")
+      input#hidden_btn(type="submit")
+
+    section.copy_game_area
+
+
+

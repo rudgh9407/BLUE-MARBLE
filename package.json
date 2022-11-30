@@ -1,0 +1,20 @@
+{
+  "name": "blue_marble",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "express-generator": "^4.16.1",
+    "forever": "^4.0.3",
+    "mysql": "^2.18.1",
+    "pug": "^3.0.2",
+    "supervisor": "^0.12.0"
+  }
+}

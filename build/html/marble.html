@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="KO">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>LINE MARBLE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../css/marble.css">
+    <script type="text/javascript" src="../js/data.json"></script>
+    <script type="text/javascript" src="../js/marble.js"></script>
+  </head>
+  <body>
+    <section class="top_area">
+      <section>
+        <article class="user_area_1">
+          <article>
+            <div class="user_img_1"> </div>
+          </article>
+          <article> 
+            <div> 
+              <p class="user_name_1"></p>
+            </div>
+            <div> 
+              <p class="user_money_1"></p>
+            </div>
+          </article>
+        </article>
+        <div class="btn_login_1">
+          <p>로그인</p>
+        </div>
+      </section>
+      <section class="top_card_area">
+        <div>
+          <p>본 사이트는 비상업적으로 제작되었습니다.</p>
+        </div>
+        <div>
+          <p>HELLO PARK !!</p>
+        </div>
+      </section>
+    </section>
+    <section class="bottom_area">
+      <section> 
+        <p>순위표</p>
+        <article class="rank_list"> 
+          <article> 
+            <p>순위</p>
+            <p>닉네임 </p>
+            <p>승</p>
+            <p>패</p>
+          </article>
+        </article>
+      </section>
+      <section>
+        <div class="btn_login_2">
+          <p>로그인</p>
+        </div>
+        <article class="user_area_2">
+          <article> 
+            <div> 
+              <p class="user_name_2"></p>
+            </div>
+            <div> 
+              <p class="user_money_2"></p>
+            </div>
+          </article>
+          <article>
+            <div class="user_img_2"></div>
+          </article>
+        </article>
+      </section>
+    </section>
+    <section class="game_area">
+      <section class="game_board">
+        <article>
+          <article class="board_line_1"> 
+            <div class="pos_17"></div>
+            <div class="pos_18"></div>
+            <div class="pos_19"></div>
+            <div class="pos_20"></div>
+            <div class="pos_21"></div>
+            <div class="pos_22"></div>
+            <div class="pos_23"></div>
+          </article>
+          <article class="board_line_2">
+            <div class="pos_7"></div>
+            <div class="pos_6"></div>
+            <div class="pos_5"></div>
+            <div class="pos_4"></div>
+            <div class="pos_3"></div>
+            <div class="pos_2"></div>
+            <div class="pos_1"></div>
+          </article>
+        </article>
+        <article>
+          <article class="board_line_3">
+            <div class="pos_9"></div>
+            <div class="pos_10"></div>
+            <div class="pos_11"></div>
+            <div class="pos_12"></div>
+            <div class="pos_13"></div>
+            <div class="pos_14"></div>
+            <div class="pos_15"></div>
+          </article>
+          <article class="board_line_4">
+            <div class="pos_31"></div>
+            <div class="pos_30"></div>
+            <div class="pos_29"></div>
+            <div class="pos_28"></div>
+            <div class="pos_27"></div>
+            <div class="pos_26"></div>
+            <div class="pos_25"></div>
+          </article>
+        </article>
+        <article> 
+          <div class="game_title">
+            <p>라인마불</p>
+            <div>
+              <p>라인마불</p>
+            </div>
+          </div>
+          <div class="dice_container">
+            <div class="dice dice_1">
+              <div class="cube">
+                <div class="side side_1"><span class="dot dot_5"></span></div>
+                <div class="side side_2"><span class="dot dot_3"></span><span class="dot dot_7"></span></div>
+                <div class="side side_3"><span class="dot dot_3"></span><span class="dot dot_5"></span><span class="dot dot_7"></span></div>
+                <div class="side side_4"><span class="dot dot_1"></span><span class="dot dot_3"></span><span class="dot dot_7"></span><span class="dot dot_9"></span></div>
+                <div class="side side_5"><span class="dot dot_1"></span><span class="dot dot_3"></span><span class="dot dot_5"></span><span class="dot dot_7"></span><span class="dot dot_9"></span></div>
+                <div class="side side_6"><span class="dot dot_1"></span><span class="dot dot_4"></span><span class="dot dot_7"></span><span class="dot dot_3"></span><span class="dot dot_6"></span><span class="dot dot_9"></span></div>
+              </div>
+            </div>
+            <div class="dice dice_2">
+              <div class="cube">
+                <div class="side side_1"><span class="dot dot_5"></span></div>
+                <div class="side side_2"><span class="dot dot_3"></span><span class="dot dot_7"></span></div>
+                <div class="side side_3"><span class="dot dot_3"></span><span class="dot dot_5"></span><span class="dot dot_7"></span></div>
+                <div class="side side_4"><span class="dot dot_1"></span><span class="dot dot_3"></span><span class="dot dot_7"></span><span class="dot dot_9"></span></div>
+                <div class="side side_5"><span class="dot dot_1"></span><span class="dot dot_3"></span><span class="dot dot_5"></span><span class="dot dot_7"></span><span class="dot dot_9"></span></div>
+                <div class="side side_6"><span class="dot dot_1"></span><span class="dot dot_4"></span><span class="dot dot_7"></span><span class="dot dot_3"></span><span class="dot dot_6"></span><span class="dot dot_9"></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="btn_roll">
+            <p>ROLL</p>
+          </div>
+          <article class="dice_double"> 
+            <p>DOUBLE</p>
+          </article>
+          <div class="please_login">
+            <p>로그인 해주세요</p>
+            <div> 
+              <p>로그인 해주세요</p>
+            </div>
+          </div>
+        </article>
+        <article>
+          <article>
+            <div class="pos_16">
+              <p>올림픽</p>
+            </div>
+            <div class="pos_24">
+              <p>세계여행</p>
+            </div>
+          </article>
+          <article> 
+            <div class="pos_8">
+              <p>무인도</p>
+            </div>
+            <div class="pos_0">
+              <p>출발</p>
+            </div>
+          </article>
+        </article>
+      </section>
+    </section>
+    <div class="user_obj_1"></div>
+    <div class="user_obj_2"></div>
+    <article class="city_popup"> 
+      <article>
+        <article class="city_popup_color">
+          <div> 
+            <p class="city_popup_name"></p>
+          </div>
+          <div class="city_popup_close"> <i class="xi-close"></i></div>
+        </article>
+        <article class="city_popup_list">
+          <div>
+            <div> 
+              <p>땅값</p>
+            </div>
+            <div></div>
+            <div> 
+              <p class="popup_land_price"></p>
+            </div>
+          </div>
+          <div>
+            <div> 
+              <p>빌라</p>
+            </div>
+            <div></div>
+            <div> 
+              <p class="popup_villa_price"></p>
+            </div>
+          </div>
+          <div>
+            <div> 
+              <p>빌딩</p>
+            </div>
+            <div></div>
+            <div> 
+              <p class="popup_building_price"></p>
+            </div>
+          </div>
+          <div>
+            <div> 
+              <p>호텔</p>
+            </div>
+            <div></div>
+            <div> 
+              <p class="popup_hotel_price"></p>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="city_popup_buy">
+            <p>구매 </p>
+            <div> </div>
+            <div> 
+              <p class="city_popup_total"></p>
+            </div>
+            <div></div>
+          </div>
+          <div> 
+            <p>통행료</p><i class="xi-play"></i>
+            <p class="city_popup_pass"></p>
+          </div>
+        </article>
+      </article>
+    </article>
+    <article class="island_popup"> 
+      <article>
+        <article class="island_popup_color">
+          <div> 
+            <p class="island_popup_name"></p>
+          </div>
+          <div class="island_popup_close"> <i class="xi-close"></i></div>
+        </article>
+        <article class="island_popup_list">
+          <div> 
+            <div class="island_popup_img"></div>
+          </div>
+          <div class="island_popup_type">
+            <article>
+              <p>통행료</p>
+            </article>
+            <div> 
+              <p>땅값</p><i class="xi-play"></i>
+              <p>8.0만</p>
+            </div>
+            <div> 
+              <p>파라솔</p><i class="xi-play"></i>
+              <p>16.0만</p>
+            </div>
+            <div>
+              <p>방갈로</p><i class="xi-play"></i>
+              <p>32.0만</p>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="island_popup_buy">
+            <p>구매</p>
+            <div> </div>
+            <div> 
+              <p class="island_popup_total">8.0만</p>
+            </div>
+            <div></div>
+          </div>
+          <div> 
+            <p>구매 후 남는 마블</p><i class="xi-play"></i>
+            <p class="island_popup_after"></p>
+          </div>
+        </article>
+      </article>
+    </article>
+    <article class="desert_island_popup"> 
+      <article>
+        <div class="close_popup">
+          <p>닫기</p>
+        </div>
+      </article>
+    </article>
+    <article class="olympic_popup"> 
+      <article>
+        <div class="close_popup">
+          <p>닫기</p>
+        </div>
+      </article>
+    </article>
+    <article class="travel_popup">
+      <article>
+        <div class="close_popup">
+          <p>닫기</p>
+        </div>
+      </article>
+    </article>
+    <article class="tax_popup">
+      <article>
+        <div class="close_popup">
+          <p>닫기</p>
+        </div>
+      </article>
+    </article>
+    <article class="take_popup">
+      <article>
+        <div>
+          <p>도시 인수</p>
+        </div>
+        <div>
+          <p class="take_city">서울</p>
+          <p>인수할까요?</p>
+        </div>
+        <p>주의: 건설비용의 2배지불</p>
+        <article> 
+          <div class="take_popup_btn">
+            <p>인수</p>
+            <div></div>
+            <p class="take_price">130.5만</p>
+            <div></div>
+          </div>
+          <div class="take_popup_close">
+            <p>취소</p>
+          </div>
+        </article>
+        <div> 
+          <p>인수 후 남는 마블</p><i class="xi-play"> </i>
+          <p class="take_after_price">550.5만</p>
+        </div>
+      </article>
+    </article>
+    <article class="error_popup"> 
+      <article> 
+        <p class="error_text">보유중인 도시가 없습니다!!</p>
+        <div class="error_close">
+          <p>닫기</p>
+        </div>
+      </article>
+    </article>
+    <article class="end_popup"> 
+      <article>
+        <div> 
+          <p>축하합니다!</p>
+          <div>
+            <p>축하합니다!</p>
+          </div>
+        </div>
+        <div>
+          <p class="end_user">USER 1 승리!</p>
+          <div>
+            <p class="end_user">USER 1 승리!</p>
+          </div>
+        </div>
+        <div class="end_popup_close">
+          <p>닫기</p>
+        </div>
+      </article>
+    </article>
+    <article class="login_popup">
+      <article> 
+        <article>
+          <p>캐릭터 선택</p>
+          <article>
+            <div class="choice_img">
+              <div></div>
+            </div>
+            <div class="choice_img"> 
+              <div></div>
+            </div>
+            <div class="choice_img"> 
+              <div></div>
+            </div>
+            <div class="choice_img">
+              <div></div>
+            </div>
+            <div class="choice_img">
+              <div></div>
+            </div>
+          </article>
+        </article>
+        <article>
+          <input id="login_1" type="text" name="id_1" placeholder="닉네임을 입력해주세요." maxLength="8">
+          <input id="login_2" type="text" name="id_2" placeholder="닉네임을 입력해주세요." maxLength="8">
+        </article>
+        <article> 
+          <div class="login_btn">
+            <p>로그인</p>
+          </div>
+        </article>
+      </article>
+    </article>
+    <form class="hidden_popup" method="post">
+      <input id="win_name" type="text" name="win_name">
+      <input id="loss_name" type="text" name="loss_name">
+      <input id="hidden_btn" type="submit">
+    </form>
+    <section class="copy_game_area"></section>
+  </body>
+</html>

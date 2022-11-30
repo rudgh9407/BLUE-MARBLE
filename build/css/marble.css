@@ -1,0 +1,2101 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1vw;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+  user-select: none;
+  background: transparent;
+  pointer-events: none;
+  box-sizing: border-box;
+  font-family: "NanumSquareRound", sans-serif;
+  color: #333;
+  list-style-type: none;
+  transform-origin: center center; }
+
+html, body {
+  scroll-behavior: smooth;
+  overflow-x: hidden; }
+
+button, input[type="button"], input[type="submit"] {
+  cursor: pointer; }
+
+*::-webkit-scrollbar {
+  display: none; }
+
+blockquote, q {
+  quotes: none; }
+
+a, button {
+  cursor: pointer; }
+
+p, span {
+  cursor: default; }
+
+p {
+  word-break: keep-all; }
+
+table, thead, tbody, th, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+  cursor: default; }
+
+html {
+  width: 100%;
+  height: 100%; }
+  html body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+    background: url("../img/background.png") no-repeat center center/cover;
+    position: relative;
+    perspective: 150vw; }
+    html body .top_area {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding-left: 1vw;
+      padding-right: 1vw;
+      align-items: flex-start; }
+      html body .top_area > section:nth-child(1) {
+        width: 20%;
+        height: 90%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start; }
+        html body .top_area > section:nth-child(1) > article:nth-child(1) {
+          width: 100%;
+          height: 25%;
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: flex-start;
+          align-items: center;
+          border-radius: 1vw;
+          background: rgba(255, 70, 50, 0.7);
+          box-shadow: 0 1vw 1.5vw 0 rgba(255, 255, 255, 0.4);
+          border: 0.1vw solid rgba(255, 255, 255, 0.18); }
+          html body .top_area > section:nth-child(1) > article:nth-child(1) > article:nth-child(1) {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            html body .top_area > section:nth-child(1) > article:nth-child(1) > article:nth-child(1) .user_img_1 {
+              width: 90%;
+              height: 90%; }
+          html body .top_area > section:nth-child(1) > article:nth-child(1) > article:nth-child(2) {
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: center; }
+            html body .top_area > section:nth-child(1) > article:nth-child(1) > article:nth-child(2) > div {
+              width: 90%;
+              height: 45%;
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+              html body .top_area > section:nth-child(1) > article:nth-child(1) > article:nth-child(2) > div > p {
+                font-size: 1.5vw;
+                font-weight: 600;
+                color: #FFF; }
+        html body .top_area > section:nth-child(1) > div {
+          width: 30%;
+          height: 2.2vw;
+          border-radius: 0.5vw;
+          background: rgba(255, 255, 255, 0.2);
+          border: 0.3vw solid #333;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          pointer-events: all;
+          transition: all 0.3s;
+          cursor: pointer;
+          border-radius: 2vw;
+          margin-top: 2vh; }
+          html body .top_area > section:nth-child(1) > div > p {
+            pointer-events: none;
+            font-size: 1.3vw;
+            font-weight: bold;
+            color: #333;
+            transition: all 0.3s; }
+          html body .top_area > section:nth-child(1) > div:hover {
+            transition: all 0.3s;
+            background: #FFF;
+            border-color: #F54;
+            filter: drop-shadow(0.2vw 0.2vw 0 #333); }
+            html body .top_area > section:nth-child(1) > div:hover > p {
+              transition: all 0.3s;
+              color: #F54; }
+      html body .top_area > section:nth-child(2) {
+        width: 20%;
+        height: 25%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center; }
+        html body .top_area > section:nth-child(2) > div {
+          width: 60%;
+          height: 45%;
+          border-radius: 1vw;
+          background: rgba(30, 30, 30, 0.8);
+          box-shadow: 0 1vw 2.5vw 0 rgba(145, 38, 65, 0.4);
+          backdrop-filter: blur(0.5rem);
+          -webkit-backdrop-filter: blur(0.5rem);
+          border: 0.1vw solid rgba(255, 255, 255, 0.18);
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          html body .top_area > section:nth-child(2) > div > p {
+            font-size: 1.5vw;
+            font-weight: 600;
+            color: #FFF; }
+          html body .top_area > section:nth-child(2) > div:nth-child(1) {
+            margin-left: -3vw;
+            width: 100%; }
+            html body .top_area > section:nth-child(2) > div:nth-child(1) > p {
+              font-size: 1vw;
+              font-weight: 400; }
+          html body .top_area > section:nth-child(2) > div:nth-child(2) {
+            margin-left: 8vw; }
+    html body .bottom_area {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding-left: 1vw;
+      padding-right: 1vw;
+      align-items: flex-end; }
+      html body .bottom_area > section:nth-child(1) {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center; }
+        html body .bottom_area > section:nth-child(1) > p {
+          font-size: 1.4vw;
+          font-weight: 900;
+          color: #333;
+          margin-bottom: 0.5vh; }
+        html body .bottom_area > section:nth-child(1) > article {
+          width: 90%;
+          height: 100%;
+          overflow-x: hidden;
+          overflow-y: auto;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: flex-start;
+          border-radius: 1vw;
+          border: 0.2vw solid #3333;
+          background: rgba(255, 255, 255, 0.2);
+          box-shadow: 0.5vw 0.5vw 1vw 0 rgba(0, 0, 0, 0.4);
+          backdrop-filter: blur(0.5rem);
+          -webkit-backdrop-filter: blur(0.5rem); }
+          html body .bottom_area > section:nth-child(1) > article > article {
+            margin-bottom: 0.5vh;
+            width: 100%;
+            height: 8%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center; }
+            html body .bottom_area > section:nth-child(1) > article > article:nth-child(1) {
+              background: rgba(255, 255, 255, 0.3);
+              border-bottom: 0.2vw solid #3331; }
+            html body .bottom_area > section:nth-child(1) > article > article > p {
+              font-size: 1vw;
+              font-weight: 600;
+              color: #333;
+              text-align: center;
+              border-right: 0.05vw solid #3332; }
+              html body .bottom_area > section:nth-child(1) > article > article > p:nth-child(1) {
+                width: 20%; }
+              html body .bottom_area > section:nth-child(1) > article > article > p:nth-child(2) {
+                width: 40%; }
+              html body .bottom_area > section:nth-child(1) > article > article > p:nth-child(3) {
+                width: 20%; }
+              html body .bottom_area > section:nth-child(1) > article > article > p:nth-child(4) {
+                width: 20%;
+                border: none; }
+            html body .bottom_area > section:nth-child(1) > article > article:nth-child(2) {
+              position: relative; }
+              html body .bottom_area > section:nth-child(1) > article > article:nth-child(2) > div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20%;
+                height: 100%;
+                background: url("../img/rank1.png") no-repeat center center/contain; }
+            html body .bottom_area > section:nth-child(1) > article > article:nth-child(3) {
+              position: relative; }
+              html body .bottom_area > section:nth-child(1) > article > article:nth-child(3) > div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20%;
+                height: 100%;
+                background: url("../img/rank2.png") no-repeat center center/contain; }
+            html body .bottom_area > section:nth-child(1) > article > article:nth-child(4) {
+              position: relative; }
+              html body .bottom_area > section:nth-child(1) > article > article:nth-child(4) > div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20%;
+                height: 100%;
+                background: url("../img/rank3.png") no-repeat center center/contain; }
+      html body .bottom_area > section:nth-child(2) {
+        width: 20%;
+        height: 90%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+        align-items: flex-end; }
+        html body .bottom_area > section:nth-child(2) > article:nth-child(2) {
+          width: 100%;
+          height: 25%;
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: flex-start;
+          align-items: center;
+          border-radius: 1vw;
+          background: rgba(50, 70, 255, 0.7);
+          box-shadow: 0 1vw 1.5vw 0 rgba(255, 255, 255, 0.4);
+          border: 0.1vw solid rgba(255, 255, 255, 0.18); }
+          html body .bottom_area > section:nth-child(2) > article:nth-child(2) > article:nth-child(2) {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            html body .bottom_area > section:nth-child(2) > article:nth-child(2) > article:nth-child(2) .user_img_2 {
+              width: 90%;
+              height: 90%; }
+          html body .bottom_area > section:nth-child(2) > article:nth-child(2) > article:nth-child(1) {
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: center; }
+            html body .bottom_area > section:nth-child(2) > article:nth-child(2) > article:nth-child(1) > div {
+              width: 90%;
+              height: 45%;
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+              html body .bottom_area > section:nth-child(2) > article:nth-child(2) > article:nth-child(1) > div > p {
+                font-size: 1.5vw;
+                font-weight: 600;
+                color: #FFF; }
+        html body .bottom_area > section:nth-child(2) > div {
+          width: 30%;
+          height: 2.2vw;
+          border-radius: 0.5vw;
+          border: 0.3vw solid #333;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          pointer-events: all;
+          transition: all 0.3s;
+          cursor: pointer;
+          margin-bottom: 2vh;
+          border-radius: 2vw; }
+          html body .bottom_area > section:nth-child(2) > div > p {
+            pointer-events: none;
+            font-size: 1.3vw;
+            font-weight: bold;
+            color: #333;
+            transition: all 0.3s; }
+          html body .bottom_area > section:nth-child(2) > div:hover {
+            transition: all 0.3s;
+            background: #FFF;
+            border-color: #56F;
+            filter: drop-shadow(0.2vw 0.2vw 0 #333); }
+            html body .bottom_area > section:nth-child(2) > div:hover > p {
+              color: #56F;
+              transition: all 0.3s; }
+    html body .game_area {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0%;
+      transform-style: preserve-3d;
+      left: 0%;
+      perspective: 150vw;
+      transform: rotateX(40deg) translateY(-10vh);
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      html body .game_area .game_board {
+        width: 95vh;
+        height: 95vh;
+        transform-style: preserve-3d;
+        border-radius: 2vw;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 1vw 1vw 1vw 0 rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(0.5rem);
+        -webkit-backdrop-filter: blur(0.5rem);
+        border: 0.1vw solid rgba(255, 255, 255, 0.18);
+        position: relative;
+        transform: rotate(45deg);
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        html body .game_area .game_board > article:nth-child(1) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 30; }
+          html body .game_area .game_board > article:nth-child(1) > article {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center; }
+            html body .game_area .game_board > article:nth-child(1) > article > div {
+              width: 10%;
+              height: 100%; }
+              html body .game_area .game_board > article:nth-child(1) > article > div > div {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                box-shadow: inset 0.1vw 0.1vw 0 #FFF, inset -0.1vw -0.1vw 0 #FFF;
+                border-radius: 0.8vw;
+                position: relative; }
+                html body .game_area .game_board > article:nth-child(1) > article > div > div > p {
+                  font-size: 1.1vw;
+                  font-weight: 600;
+                  color: #FFF;
+                  filter: drop-shadow(0.1vw 0.1vw 0 #333); }
+                html body .game_area .game_board > article:nth-child(1) > article > div > div > article:nth-child(2) {
+                  width: 80%;
+                  height: 30%;
+                  position: absolute;
+                  top: 0%;
+                  left: 0;
+                  display: flex;
+                  flex-flow: row nowrap;
+                  justify-content: space-between;
+                  align-items: center;
+                  transform: rotate(-45deg); }
+                  html body .game_area .game_board > article:nth-child(1) > article > div > div > article:nth-child(2) > div {
+                    position: absolute;
+                    transform-style: flat; }
+                    html body .game_area .game_board > article:nth-child(1) > article > div > div > article:nth-child(2) > div:nth-child(1) {
+                      width: 70%;
+                      height: 150%;
+                      top: -75%;
+                      left: 35%;
+                      transform: scale(0) rotate(5deg);
+                      background: url("../img/flag-r.png") no-repeat center center/contain; }
+                    html body .game_area .game_board > article:nth-child(1) > article > div > div > article:nth-child(2) > div:nth-child(2) {
+                      width: 60%;
+                      height: 150%;
+                      top: 10%;
+                      right: -10%;
+                      transform: scale(0) rotate(5deg) rotateY(180deg);
+                      z-index: 100;
+                      background: url("../img/villa-r.png") no-repeat center center/contain; }
+                    html body .game_area .game_board > article:nth-child(1) > article > div > div > article:nth-child(2) > div:nth-child(3) {
+                      width: 70%;
+                      height: 150%;
+                      top: -30%;
+                      left: 20%;
+                      transform: scale(0) rotate(5deg);
+                      z-index: 50;
+                      background: url("../img/building-r.png") no-repeat center center/contain; }
+                    html body .game_area .game_board > article:nth-child(1) > article > div > div > article:nth-child(2) > div:nth-child(4) {
+                      width: 150%;
+                      height: 200%;
+                      top: -130%;
+                      left: -40%;
+                      transform: scale(0) rotate(5deg);
+                      background: url("../img/hotel-r.png") no-repeat center center/contain; }
+            html body .game_area .game_board > article:nth-child(1) > article:nth-child(2) > div > div > article:nth-child(2) {
+              width: 80%;
+              height: 30%;
+              position: absolute;
+              top: 0%;
+              left: 0;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-between;
+              align-items: center;
+              transform: rotate(-45deg); }
+              html body .game_area .game_board > article:nth-child(1) > article:nth-child(2) > div > div > article:nth-child(2) > div {
+                position: absolute;
+                transform-style: flat; }
+                html body .game_area .game_board > article:nth-child(1) > article:nth-child(2) > div > div > article:nth-child(2) > div:nth-child(1) {
+                  width: 70%;
+                  height: 150%;
+                  top: -75%;
+                  left: 35%;
+                  transform: scale(0) rotate(0deg);
+                  background: url("../img/flag-r.png") no-repeat center center/contain; }
+                html body .game_area .game_board > article:nth-child(1) > article:nth-child(2) > div > div > article:nth-child(2) > div:nth-child(2) {
+                  width: 60%;
+                  height: 150%;
+                  top: 20%;
+                  right: -10%;
+                  transform: scale(0) rotate(0deg);
+                  z-index: 100;
+                  background: url("../img/villa-r.png") no-repeat center center/contain; }
+                html body .game_area .game_board > article:nth-child(1) > article:nth-child(2) > div > div > article:nth-child(2) > div:nth-child(3) {
+                  width: 70%;
+                  height: 150%;
+                  top: -30%;
+                  left: 20%;
+                  transform: scale(0) rotate(0deg);
+                  z-index: 50;
+                  background: url("../img/building-r.png") no-repeat center center/contain; }
+                html body .game_area .game_board > article:nth-child(1) > article:nth-child(2) > div > div > article:nth-child(2) > div:nth-child(4) {
+                  width: 150%;
+                  height: 200%;
+                  top: -130%;
+                  left: -40%;
+                  transform: scale(0) rotate(0deg);
+                  background: url("../img/hotel-r.png") no-repeat center center/contain; }
+        html body .game_area .game_board > article:nth-child(2) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 20;
+          transform: rotate(-90deg); }
+          html body .game_area .game_board > article:nth-child(2) > article {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center; }
+            html body .game_area .game_board > article:nth-child(2) > article > div {
+              width: 10%;
+              height: 100%; }
+              html body .game_area .game_board > article:nth-child(2) > article > div > div {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                box-shadow: inset 0.1vw 0.1vw 0 #FFF, inset -0.1vw -0.1vw 0 #FFF;
+                border-radius: 0.8vw;
+                position: relative; }
+                html body .game_area .game_board > article:nth-child(2) > article > div > div > p {
+                  font-size: 1.1vw;
+                  font-weight: 600;
+                  color: #FFF;
+                  filter: drop-shadow(0.1vw 0.1vw 0 #333); }
+                html body .game_area .game_board > article:nth-child(2) > article > div > div > article:nth-child(2) {
+                  width: 80%;
+                  height: 30%;
+                  position: absolute;
+                  top: 0%;
+                  left: 0;
+                  display: flex;
+                  flex-flow: row nowrap;
+                  justify-content: space-between;
+                  align-items: center;
+                  transform: rotate(40deg); }
+                  html body .game_area .game_board > article:nth-child(2) > article > div > div > article:nth-child(2) > div {
+                    position: absolute;
+                    transform-style: flat; }
+                    html body .game_area .game_board > article:nth-child(2) > article > div > div > article:nth-child(2) > div:nth-child(1) {
+                      width: 70%;
+                      height: 150%;
+                      top: -110%;
+                      left: 30%;
+                      transform: scale(0) rotate(0deg);
+                      background: url("../img/flag-r.png") no-repeat center center/contain; }
+                    html body .game_area .game_board > article:nth-child(2) > article > div > div > article:nth-child(2) > div:nth-child(2) {
+                      width: 60%;
+                      height: 150%;
+                      top: -100%;
+                      left: 65%;
+                      transform: scale(0) rotate(0deg) rotateY(180deg);
+                      background: url("../img/villa-r.png") no-repeat center center/contain; }
+                    html body .game_area .game_board > article:nth-child(2) > article > div > div > article:nth-child(2) > div:nth-child(3) {
+                      width: 70%;
+                      height: 150%;
+                      top: -60%;
+                      left: 30%;
+                      transform: scale(0) rotate(0deg) rotateY(180deg);
+                      z-index: 50;
+                      background: url("../img/building-r.png") no-repeat center center/contain; }
+                    html body .game_area .game_board > article:nth-child(2) > article > div > div > article:nth-child(2) > div:nth-child(4) {
+                      width: 150%;
+                      height: 200%;
+                      top: -80%;
+                      left: -35%;
+                      z-index: 100;
+                      transform: scale(0) rotate(0deg);
+                      background: url("../img/hotel-r.png") no-repeat center center/contain; }
+              html body .game_area .game_board > article:nth-child(2) > article > div:nth-child(1) {
+                z-index: 100; }
+              html body .game_area .game_board > article:nth-child(2) > article > div:nth-child(2) {
+                z-index: 90; }
+              html body .game_area .game_board > article:nth-child(2) > article > div:nth-child(3) {
+                z-index: 80; }
+              html body .game_area .game_board > article:nth-child(2) > article > div:nth-child(4) {
+                z-index: 70; }
+              html body .game_area .game_board > article:nth-child(2) > article > div:nth-child(5) {
+                z-index: 60; }
+              html body .game_area .game_board > article:nth-child(2) > article > div:nth-child(6) {
+                z-index: 50; }
+              html body .game_area .game_board > article:nth-child(2) > article > div:nth-child(7) {
+                z-index: 40; }
+            html body .game_area .game_board > article:nth-child(2) > article .pos_30 {
+              position: relative; }
+              html body .game_area .game_board > article:nth-child(2) > article .pos_30 > div > p:nth-child(3) {
+                position: absolute;
+                bottom: -5vh;
+                color: #333;
+                font-size: 1.3vw;
+                font-weight: 900; }
+            html body .game_area .game_board > article:nth-child(2) > article:nth-child(2) > div > div > article:nth-child(2) {
+              width: 80%;
+              height: 30%;
+              position: absolute;
+              top: 0%;
+              left: 0;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-between;
+              align-items: center;
+              transform: rotate(45deg); }
+              html body .game_area .game_board > article:nth-child(2) > article:nth-child(2) > div > div > article:nth-child(2) > div {
+                position: absolute;
+                transform-style: flat; }
+                html body .game_area .game_board > article:nth-child(2) > article:nth-child(2) > div > div > article:nth-child(2) > div:nth-child(1) {
+                  width: 70%;
+                  height: 150%;
+                  top: -110%;
+                  left: 30%;
+                  transform: scale(0) rotate(0deg);
+                  background: url("../img/flag-r.png") no-repeat center center/contain; }
+                html body .game_area .game_board > article:nth-child(2) > article:nth-child(2) > div > div > article:nth-child(2) > div:nth-child(2) {
+                  width: 60%;
+                  height: 150%;
+                  top: -100%;
+                  left: 65%;
+                  transform: scale(0) rotate(0deg) rotateY(180deg);
+                  background: url("../img/villa-r.png") no-repeat center center/contain; }
+                html body .game_area .game_board > article:nth-child(2) > article:nth-child(2) > div > div > article:nth-child(2) > div:nth-child(3) {
+                  width: 70%;
+                  height: 150%;
+                  top: -60%;
+                  left: 30%;
+                  transform: scale(0) rotate(0deg) rotateY(180deg);
+                  z-index: 50;
+                  background: url("../img/building-r.png") no-repeat center center/contain; }
+                html body .game_area .game_board > article:nth-child(2) > article:nth-child(2) > div > div > article:nth-child(2) > div:nth-child(4) {
+                  width: 150%;
+                  height: 200%;
+                  top: -80%;
+                  left: -35%;
+                  z-index: 100;
+                  transform: scale(0) rotate(0deg);
+                  background: url("../img/hotel-r.png") no-repeat center center/contain; }
+        html body .game_area .game_board > article:nth-child(3) {
+          width: 75%;
+          height: 75%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center;
+          transform: rotate(-45deg);
+          perspective: 20vw;
+          z-index: 300;
+          position: relative; }
+          html body .game_area .game_board > article:nth-child(3) > div {
+            width: 80%;
+            height: 30%;
+            transform: scale(0);
+            transform-style: preserve-3d; }
+            html body .game_area .game_board > article:nth-child(3) > div:nth-child(1) {
+              margin-top: 2vw;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: relative; }
+              html body .game_area .game_board > article:nth-child(3) > div:nth-child(1) > p {
+                font-size: 4vw;
+                font-weight: 900;
+                color: #FFF;
+                -webkit-text-stroke: 1vw #333;
+                text-shadow: 0rem 1vw 1.5vw rgba(33, 33, 33, 0.4); }
+              html body .game_area .game_board > article:nth-child(3) > div:nth-child(1) > div {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0%;
+                left: 0%;
+                display: flex;
+                justify-content: center;
+                align-items: center; }
+                html body .game_area .game_board > article:nth-child(3) > div:nth-child(1) > div > p {
+                  font-size: 4vw;
+                  font-weight: 900;
+                  color: #FFF;
+                  -webkit-text-fill-color: #FFF; }
+            html body .game_area .game_board > article:nth-child(3) > div:nth-child(3) {
+              width: 20%;
+              height: 20%;
+              border-radius: 50%;
+              border: 0.5vw solid #FFF;
+              background-color: transparent;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              pointer-events: all;
+              cursor: pointer;
+              transition: all 0.2s;
+              filter: drop-shadow(0 0.2vw 0 #333);
+              transform: scale(0); }
+              html body .game_area .game_board > article:nth-child(3) > div:nth-child(3) > p {
+                transition: all 0.2s;
+                font-size: 2vw;
+                font-weight: 900;
+                color: #FFF;
+                pointer-events: none; }
+              html body .game_area .game_board > article:nth-child(3) > div:nth-child(3):hover {
+                transition: all 0.2s;
+                border-color: #333; }
+                html body .game_area .game_board > article:nth-child(3) > div:nth-child(3):hover > p {
+                  transition: all 0.2s;
+                  color: #333; }
+          html body .game_area .game_board > article:nth-child(3) .dice_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(0);
+            z-index: 100; }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .dice {
+              width: 10vw;
+              height: 10vw;
+              margin: 5vw;
+              perspective: 40vw;
+              filter: drop-shadow(1vw 1vw 1vw #3338); }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .cube {
+              position: relative;
+              width: 10vw;
+              height: 10vw;
+              transform-style: preserve-3d;
+              transform: translateZ(-5vw) rotateX(0) rotateY(0);
+              transition: transform 0.7s cubic-bezier(0.215, 0.61, 0.355, 1); }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .side {
+              position: absolute;
+              width: 10vw;
+              height: 10vw;
+              box-sizing: border-box;
+              border: -0.1vw solid rgba(255, 255, 255, 0.25);
+              border-radius: 0.2vw;
+              overflow: hidden;
+              background: #F54;
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden; }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .side_1 {
+              transform: translateZ(-5vw) rotateX(180deg); }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .side_2 {
+              transform: translateY(-5vw) rotateX(90deg); }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .side_3 {
+              transform: translateX(5vw) rotateY(90deg); }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .side_4 {
+              transform: translateX(-5vw) rotateY(270deg); }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .side_5 {
+              transform: translateY(5vw) rotateX(270deg); }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .side_6 {
+              transform: translateZ(5vw); }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .dice[data-val="1"] .cube {
+              transform: translateZ(-5vw) rotateX(180deg) rotateY(0deg); }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .dice[data-val="2"] .cube {
+              transform: translateZ(-5vw) rotateX(-90deg) rotateY(0deg); }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .dice[data-val="3"] .cube {
+              transform: translateZ(-5vw) rotateX(0deg) rotateY(-90deg); }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .dice[data-val="4"] .cube {
+              transform: translateZ(-5vw) rotateX(0deg) rotateY(90deg); }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .dice[data-val="5"] .cube {
+              transform: translateZ(-5vw) rotateX(90deg) rotateY(0deg); }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .dice[data-val="0"] .cube {
+              transition: transform 1s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .dice_1[data-val="0"] .cube {
+              transform: translateZ(-5vw) rotateX(359deg) rotateY(359deg); }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .dice_2[data-val="0"] .cube {
+              transform: translateZ(-5vw) rotateX(-359deg) rotateY(-359deg); }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .dot {
+              position: absolute;
+              width: 2vw;
+              height: 2vw;
+              margin: -1vw 0 0 -1vw;
+              border-radius: 1vw;
+              background: #fff;
+              box-shadow: inset 0 0 1vw #3336; }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .dot_1, html body .game_area .game_board > article:nth-child(3) .dice_container .dot_2, html body .game_area .game_board > article:nth-child(3) .dice_container .dot_3 {
+              top: 2vw; }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .dot_4, html body .game_area .game_board > article:nth-child(3) .dice_container .dot_5, html body .game_area .game_board > article:nth-child(3) .dice_container .dot_6 {
+              top: 5vw; }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .dot_7, html body .game_area .game_board > article:nth-child(3) .dice_container .dot_8, html body .game_area .game_board > article:nth-child(3) .dice_container .dot_9 {
+              top: 8vw; }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .dot_1, html body .game_area .game_board > article:nth-child(3) .dice_container .dot_4, html body .game_area .game_board > article:nth-child(3) .dice_container .dot_7 {
+              left: 2vw; }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .dot_2, html body .game_area .game_board > article:nth-child(3) .dice_container .dot_5, html body .game_area .game_board > article:nth-child(3) .dice_container .dot_8 {
+              left: 5vw; }
+            html body .game_area .game_board > article:nth-child(3) .dice_container .dot_3, html body .game_area .game_board > article:nth-child(3) .dice_container .dot_6, html body .game_area .game_board > article:nth-child(3) .dice_container .dot_9 {
+              left: 8vw; }
+          html body .game_area .game_board > article:nth-child(3) .dice_double {
+            position: absolute;
+            width: 100%;
+            height: 30%;
+            top: 30%;
+            left: 0;
+            z-index: 80;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            html body .game_area .game_board > article:nth-child(3) .dice_double > p {
+              font-size: 5vw;
+              color: #5bdd79;
+              font-weight: 900;
+              filter: drop-shadow(0 0.5vw 0 #FFF);
+              transform: translateY(10vh) scale(0); }
+          html body .game_area .game_board > article:nth-child(3) .please_login {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            width: 100%;
+            transform: rotateX(-5deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(1) rotateX(-5deg); }
+            html body .game_area .game_board > article:nth-child(3) .please_login > p {
+              font-size: 10vh;
+              font-weight: 900;
+              color: #FFF;
+              -webkit-text-stroke: 2vh #F54;
+              text-shadow: 0rem 1vw 1.5vw rgba(33, 33, 33, 0.4); }
+            html body .game_area .game_board > article:nth-child(3) .please_login > div {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0%;
+              left: 0%;
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+              html body .game_area .game_board > article:nth-child(3) .please_login > div > p {
+                font-size: 10vh;
+                font-weight: 900;
+                color: #FFF;
+                -webkit-text-fill-color: #FFF; }
+        html body .game_area .game_board > article:nth-child(4) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 0; }
+          html body .game_area .game_board > article:nth-child(4) > article {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center; }
+            html body .game_area .game_board > article:nth-child(4) > article > div {
+              width: 15%;
+              height: 100%;
+              background: #56F;
+              box-shadow: inset 0.1vw 0.1vw 0 #FFF, inset -0.1vw -0.1vw 0 #FFF;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              z-index: -10;
+              border-radius: 0.8vw; }
+              html body .game_area .game_board > article:nth-child(4) > article > div > p {
+                font-size: 1.8vw;
+                font-weight: 600;
+                color: #FFF;
+                transform: rotate(-45deg); }
+            html body .game_area .game_board > article:nth-child(4) > article:nth-child(1) > div:first-child {
+              border-top-left-radius: 2vw; }
+            html body .game_area .game_board > article:nth-child(4) > article:nth-child(1) > div:last-child {
+              border-top-right-radius: 2vw; }
+            html body .game_area .game_board > article:nth-child(4) > article:nth-child(2) > div:first-child {
+              border-bottom-left-radius: 2vw; }
+            html body .game_area .game_board > article:nth-child(4) > article:nth-child(2) > div:last-child {
+              border-bottom-right-radius: 2vw; }
+        html body .game_area .game_board .olympic_mark {
+          width: 95%;
+          height: 25%;
+          position: absolute;
+          bottom: 10%;
+          left: 2.5%;
+          border: 0.2vh solid #333;
+          background: #FFF url("../img/olympic.png") no-repeat 0% center/contain;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: flex-end;
+          align-items: center;
+          transform: scale(0);
+          pointer-events: none; }
+          html body .game_area .game_board .olympic_mark > p {
+            pointer-events: none;
+            margin-right: 0.2vh;
+            font-size: 0.7vw;
+            color: #333;
+            font-weight: 600; }
+    html body .user_obj_1 {
+      filter: none;
+      transition: all 0.5s;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      width: 10vh;
+      height: 15vh;
+      position: absolute;
+      z-index: 1000; }
+    html body .user_obj_2 {
+      filter: none;
+      transition: all 0.5s;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      width: 10vh;
+      height: 15vh;
+      position: absolute;
+      z-index: 1000; }
+    html body > article {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 95%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 5000;
+      pointer-events: all;
+      transform: scale(0); }
+      html body > article > article {
+        width: 45vw;
+        height: 30vw;
+        border-radius: 3vw;
+        background: rgba(0, 0, 0, 0.4);
+        box-shadow: 0.5vw 0.5vw 0vw 0 rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(0.5rem);
+        -webkit-backdrop-filter: blur(0.5rem);
+        border: 0.5vw solid rgba(255, 255, 255, 0.8); }
+      html body > article:nth-child(6) > article {
+        width: 55vw;
+        height: 40vw;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden; }
+        html body > article:nth-child(6) > article > article:nth-child(1) {
+          width: 100%;
+          height: 10%;
+          background-color: #56F;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative; }
+          html body > article:nth-child(6) > article > article:nth-child(1) > div:nth-child(1) {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            html body > article:nth-child(6) > article > article:nth-child(1) > div:nth-child(1) > p {
+              color: #FFF;
+              font-size: 2.5vw;
+              font-weight: 900;
+              filter: drop-shadow(0.1vw 0.1vw 0.2vw #333); }
+          html body > article:nth-child(6) > article > article:nth-child(1) > div:nth-child(2) {
+            position: absolute;
+            top: 0.1vw;
+            right: 0.5vw;
+            border: 0.2vw solid #FFF;
+            width: 3.8vw;
+            height: 3.8vw;
+            border-radius: 0.5vw;
+            background-color: #333A;
+            cursor: pointer;
+            pointer-events: all;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            html body > article:nth-child(6) > article > article:nth-child(1) > div:nth-child(2) > i {
+              pointer-events: none;
+              font-size: 2vw;
+              font-weight: 900;
+              color: #FFF; }
+        html body > article:nth-child(6) > article > article:nth-child(2) {
+          width: 90%;
+          height: 40%;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center; }
+          html body > article:nth-child(6) > article > article:nth-child(2) > div {
+            pointer-events: all;
+            cursor: pointer;
+            width: 20%;
+            height: 90%;
+            border-radius: 1vw;
+            overflow: hidden;
+            border: 0.3vw solid #FFF;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            background-color: #FFF9; }
+            html body > article:nth-child(6) > article > article:nth-child(2) > div > div:nth-child(1) {
+              pointer-events: none;
+              width: 100%;
+              height: 20%;
+              background-color: #910A;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: flex-end;
+              align-items: center; }
+              html body > article:nth-child(6) > article > article:nth-child(2) > div > div:nth-child(1) > p {
+                margin-right: 1vw;
+                font-size: 1.3vw;
+                color: #FFF;
+                font-weight: 600; }
+            html body > article:nth-child(6) > article > article:nth-child(2) > div > div:nth-child(2) {
+              pointer-events: none;
+              width: 100%;
+              height: 50%; }
+            html body > article:nth-child(6) > article > article:nth-child(2) > div > div:nth-child(3) {
+              pointer-events: none;
+              width: 90%;
+              height: 20%;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: flex-end;
+              align-items: center; }
+              html body > article:nth-child(6) > article > article:nth-child(2) > div > div:nth-child(3) > p {
+                color: #F00;
+                font-weight: 900;
+                font-size: 1.3vw; }
+            html body > article:nth-child(6) > article > article:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
+              background: url("../img/flag-r.png") no-repeat center center/contain; }
+            html body > article:nth-child(6) > article > article:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+              background: url("../img/villa-r.png") no-repeat center center/contain; }
+            html body > article:nth-child(6) > article > article:nth-child(2) > div:nth-child(3) > div:nth-child(2) {
+              background: url("../img/building-r.png") no-repeat center center/contain; }
+            html body > article:nth-child(6) > article > article:nth-child(2) > div:nth-child(4) > div:nth-child(2) {
+              background: url("../img/hotel-r.png") no-repeat center center/contain; }
+          html body > article:nth-child(6) > article > article:nth-child(2) .active_city_card {
+            border-color: #FF3; }
+          html body > article:nth-child(6) > article > article:nth-child(2) .my_city_card {
+            border-color: #F00; }
+        html body > article:nth-child(6) > article > article:nth-child(3) {
+          width: 100%;
+          height: 25%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-around;
+          align-items: center; }
+          html body > article:nth-child(6) > article > article:nth-child(3) > div:nth-child(1) {
+            width: 50%;
+            pointer-events: all;
+            cursor: pointer;
+            height: 50%;
+            border-radius: 1vw;
+            border: 0.4vw solid #56F;
+            background-color: #FFF;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative; }
+            html body > article:nth-child(6) > article > article:nth-child(3) > div:nth-child(1) > p {
+              font-size: 2vw;
+              font-weight: 900;
+              color: #56F;
+              margin-left: 1vw;
+              pointer-events: none; }
+            html body > article:nth-child(6) > article > article:nth-child(3) > div:nth-child(1) > div:nth-child(2) {
+              width: 0.1vw;
+              height: 80%;
+              background-color: #333;
+              margin-left: 1vw;
+              margin-right: 1vw;
+              pointer-events: none; }
+            html body > article:nth-child(6) > article > article:nth-child(3) > div:nth-child(1) > div:nth-child(3) {
+              width: 80%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              pointer-events: none; }
+              html body > article:nth-child(6) > article > article:nth-child(3) > div:nth-child(1) > div:nth-child(3) > p {
+                font-size: 2vw;
+                font-weight: 900;
+                color: #56F; }
+            html body > article:nth-child(6) > article > article:nth-child(3) > div:nth-child(1) > div:nth-child(4) {
+              position: absolute;
+              width: 90%;
+              height: 6%;
+              top: 47%;
+              left: 5%;
+              background: #F00;
+              opacity: 0; }
+          html body > article:nth-child(6) > article > article:nth-child(3) > div:nth-child(2) {
+            width: 40%;
+            height: 40%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center; }
+            html body > article:nth-child(6) > article > article:nth-child(3) > div:nth-child(2) > p {
+              width: 50%;
+              font-size: 1.6vw;
+              font-weight: 600;
+              color: #FFF; }
+              html body > article:nth-child(6) > article > article:nth-child(3) > div:nth-child(2) > p:nth-child(1) {
+                width: 30%; }
+            html body > article:nth-child(6) > article > article:nth-child(3) > div:nth-child(2) > i {
+              width: 20%;
+              font-size: 2vw;
+              font-weight: 900;
+              color: #FFF6; }
+      html body > article:nth-child(7) > article {
+        width: 55vw;
+        height: 40vw;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden; }
+        html body > article:nth-child(7) > article > article:nth-child(1) {
+          width: 100%;
+          height: 10%;
+          background-color: #56F;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative; }
+          html body > article:nth-child(7) > article > article:nth-child(1) > div:nth-child(1) {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            html body > article:nth-child(7) > article > article:nth-child(1) > div:nth-child(1) > p {
+              color: #FFF;
+              font-size: 2.5vw;
+              font-weight: 900;
+              filter: drop-shadow(0.1vw 0.1vw 0.2vw #333); }
+          html body > article:nth-child(7) > article > article:nth-child(1) > div:nth-child(2) {
+            position: absolute;
+            top: 0.1vw;
+            right: 0.5vw;
+            border: 0.2vw solid #FFF;
+            width: 3.8vw;
+            height: 3.8vw;
+            border-radius: 0.5vw;
+            background-color: #333A;
+            cursor: pointer;
+            pointer-events: all;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            html body > article:nth-child(7) > article > article:nth-child(1) > div:nth-child(2) > i {
+              pointer-events: none;
+              font-size: 2vw;
+              font-weight: 900;
+              color: #FFF; }
+        html body > article:nth-child(7) > article > article:nth-child(2) {
+          width: 80%;
+          height: 40%;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-around;
+          align-items: center; }
+          html body > article:nth-child(7) > article > article:nth-child(2) > div:nth-child(1) {
+            width: 40%;
+            height: 90%; }
+            html body > article:nth-child(7) > article > article:nth-child(2) > div:nth-child(1) > div {
+              width: 100%;
+              height: 100%;
+              background: url("../img/island-flag-r.png") no-repeat center center/contain; }
+          html body > article:nth-child(7) > article > article:nth-child(2) > div:nth-child(2) {
+            width: 40%;
+            height: 60%;
+            border-radius: 1vw;
+            overflow: hidden;
+            border: 0.3vw solid #FFF;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: center;
+            overflow: hidden;
+            background-color: #FFF9; }
+            html body > article:nth-child(7) > article > article:nth-child(2) > div:nth-child(2) > article {
+              width: 100%;
+              height: 20%;
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+              html body > article:nth-child(7) > article > article:nth-child(2) > div:nth-child(2) > article > p {
+                font-size: 1.6vw;
+                font-weight: 900;
+                color: #F00; }
+            html body > article:nth-child(7) > article > article:nth-child(2) > div:nth-child(2) > div {
+              pointer-events: none;
+              width: 100%;
+              height: 20%;
+              background-color: #333A;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-around;
+              align-items: center;
+              padding-left: 10%;
+              padding-right: 10%; }
+              html body > article:nth-child(7) > article > article:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+                background-color: #910B; }
+              html body > article:nth-child(7) > article > article:nth-child(2) > div:nth-child(2) > div > p {
+                width: 30%;
+                font-size: 1.3vw;
+                color: #FFF;
+                font-weight: 600;
+                text-align: center; }
+              html body > article:nth-child(7) > article > article:nth-child(2) > div:nth-child(2) > div > i {
+                width: 20%;
+                color: #FFF5;
+                font-size: 1.5vw;
+                text-align: center; }
+          html body > article:nth-child(7) > article > article:nth-child(2) .active_city_card {
+            border-color: #FF3; }
+          html body > article:nth-child(7) > article > article:nth-child(2) .my_city_card {
+            border-color: #F00; }
+        html body > article:nth-child(7) > article > article:nth-child(3) {
+          width: 100%;
+          height: 25%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-around;
+          align-items: center; }
+          html body > article:nth-child(7) > article > article:nth-child(3) > div:nth-child(1) {
+            width: 50%;
+            pointer-events: all;
+            cursor: pointer;
+            height: 50%;
+            border-radius: 1vw;
+            border: 0.4vw solid #56F;
+            background-color: #FFF;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative; }
+            html body > article:nth-child(7) > article > article:nth-child(3) > div:nth-child(1) > p {
+              font-size: 2vw;
+              font-weight: 900;
+              color: #56F;
+              margin-left: 1vw;
+              pointer-events: none; }
+            html body > article:nth-child(7) > article > article:nth-child(3) > div:nth-child(1) > div:nth-child(2) {
+              width: 0.1vw;
+              height: 80%;
+              background-color: #333;
+              margin-left: 1vw;
+              margin-right: 1vw;
+              pointer-events: none; }
+            html body > article:nth-child(7) > article > article:nth-child(3) > div:nth-child(1) > div:nth-child(3) {
+              width: 80%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              pointer-events: none; }
+              html body > article:nth-child(7) > article > article:nth-child(3) > div:nth-child(1) > div:nth-child(3) > p {
+                font-size: 2vw;
+                font-weight: 900;
+                color: #56F; }
+            html body > article:nth-child(7) > article > article:nth-child(3) > div:nth-child(1) > div:nth-child(4) {
+              position: absolute;
+              width: 90%;
+              height: 6%;
+              top: 47%;
+              left: 5%;
+              background: #F00;
+              opacity: 0; }
+          html body > article:nth-child(7) > article > article:nth-child(3) > div:nth-child(2) {
+            width: 60%;
+            height: 40%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center; }
+            html body > article:nth-child(7) > article > article:nth-child(3) > div:nth-child(2) > p {
+              width: 40%;
+              font-size: 1.6vw;
+              font-weight: 600;
+              text-align: center;
+              color: #FFF; }
+              html body > article:nth-child(7) > article > article:nth-child(3) > div:nth-child(2) > p:nth-child(1) {
+                width: 40%; }
+            html body > article:nth-child(7) > article > article:nth-child(3) > div:nth-child(2) > i {
+              text-align: center;
+              width: 20%;
+              font-size: 2vw;
+              font-weight: 900;
+              color: #FFF6; }
+      html body > article:nth-child(8) > article {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center; }
+        html body > article:nth-child(8) > article > article {
+          width: 90%;
+          height: 65%;
+          display: flex; }
+          html body > article:nth-child(8) > article > article:nth-child(1) {
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: center; }
+            html body > article:nth-child(8) > article > article:nth-child(1) > div {
+              width: 100%;
+              height: 45%;
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+              html body > article:nth-child(8) > article > article:nth-child(1) > div > p {
+                color: #FFF;
+                font-size: 2.3vw;
+                font-weight: 900; }
+          html body > article:nth-child(8) > article > article:nth-child(2) {
+            height: 25%;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center; }
+            html body > article:nth-child(8) > article > article:nth-child(2) > span {
+              display: none; }
+            html body > article:nth-child(8) > article > article:nth-child(2) > div {
+              width: 40%;
+              height: 90%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 2vw;
+              border: 0.3vw solid #FFF;
+              pointer-events: all;
+              cursor: pointer;
+              position: relative;
+              background-color: #333A; }
+              html body > article:nth-child(8) > article > article:nth-child(2) > div > p {
+                pointer-events: none;
+                color: #FFF;
+                font-size: 2.3vw;
+                font-weight: 900; }
+              html body > article:nth-child(8) > article > article:nth-child(2) > div > div {
+                position: absolute;
+                width: 90%;
+                height: 6%;
+                background-color: #F00;
+                top: 47%;
+                left: 5%;
+                transform: scale(0); }
+      html body > article:nth-child(11) > article {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center; }
+        html body > article:nth-child(11) > article > article {
+          width: 90%;
+          height: 70%; }
+          html body > article:nth-child(11) > article > article > div {
+            width: 100%;
+            height: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            html body > article:nth-child(11) > article > article > div > p {
+              color: #FFF;
+              font-size: 3vw;
+              font-weight: 900; }
+            html body > article:nth-child(11) > article > article > div:nth-child(2) > p {
+              font-size: 5vw;
+              color: #F54;
+              filter: drop-shadow(0.2vw 0.2vw 0.2vw #FFFA); }
+        html body > article:nth-child(11) > article .close_popup {
+          width: 25%;
+          height: 15%;
+          border-radius: 1vw;
+          background-color: #FFF;
+          pointer-events: all;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          html body > article:nth-child(11) > article .close_popup > p {
+            pointer-events: none;
+            color: #333;
+            font-size: 2vw;
+            font-weight: 900; }
+      html body > article:nth-child(12) > article {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden; }
+        html body > article:nth-child(12) > article > div:nth-child(1) {
+          width: 95%;
+          height: 15%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #56F;
+          border-radius: 1vw; }
+          html body > article:nth-child(12) > article > div:nth-child(1) > p {
+            color: #FFF;
+            font-size: 2vw;
+            font-weight: 900; }
+        html body > article:nth-child(12) > article > div:nth-child(2) {
+          width: 95%;
+          height: 15%;
+          border-radius: 1vw;
+          background-color: #FFF;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          html body > article:nth-child(12) > article > div:nth-child(2) > p {
+            margin-left: 1vw;
+            font-size: 2vw;
+            font-weight: 900;
+            color: #56F; }
+        html body > article:nth-child(12) > article > p:nth-child(3) {
+          font-size: 1.2vw;
+          font-weight: 600;
+          color: #FFF;
+          letter-spacing: 0.1vw;
+          word-spacing: 0.3vw; }
+        html body > article:nth-child(12) > article > article:nth-child(4) {
+          width: 90%;
+          height: 30%;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center; }
+          html body > article:nth-child(12) > article > article:nth-child(4) > div {
+            width: 60%;
+            height: 60%;
+            border-radius: 1vw;
+            background-color: #ffc933;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+            pointer-events: all;
+            position: relative;
+            cursor: pointer; }
+            html body > article:nth-child(12) > article > article:nth-child(4) > div > div:nth-child(2) {
+              pointer-events: none;
+              width: 0.1vw;
+              height: 70%;
+              background-color: #3338; }
+            html body > article:nth-child(12) > article > article:nth-child(4) > div > div:nth-child(4) {
+              pointer-events: none;
+              position: absolute;
+              width: 90%;
+              height: 6%;
+              top: 47%;
+              left: 5%;
+              background: #F00;
+              opacity: 0; }
+            html body > article:nth-child(12) > article > article:nth-child(4) > div > p {
+              width: 60%;
+              pointer-events: none;
+              color: #FFF;
+              font-size: 2.3vw;
+              font-weight: 900;
+              text-align: center; }
+              html body > article:nth-child(12) > article > article:nth-child(4) > div > p:nth-child(1) {
+                width: 30%; }
+            html body > article:nth-child(12) > article > article:nth-child(4) > div:nth-child(2) {
+              width: 30%;
+              background-color: #FFF;
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+              html body > article:nth-child(12) > article > article:nth-child(4) > div:nth-child(2) > p {
+                pointer-events: none;
+                color: #333;
+                font-size: 2.2vw;
+                font-weight: 900; }
+        html body > article:nth-child(12) > article > div:nth-child(5) {
+          width: 90%;
+          height: 15%;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-around;
+          align-items: center;
+          padding-left: 5vw;
+          padding-right: 5vw;
+          border-top: 0.5vw dotted #FFF3; }
+          html body > article:nth-child(12) > article > div:nth-child(5) > p {
+            color: #FFF;
+            font-size: 1.5vw;
+            font-weight: 900; }
+          html body > article:nth-child(12) > article > div:nth-child(5) > i {
+            color: #FFF8;
+            font-size: 1.5vw;
+            font-weight: 900; }
+      html body > article:nth-child(13) > article {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center; }
+        html body > article:nth-child(13) > article > p {
+          font-size: 3vw;
+          font-weight: 900;
+          color: #FFF;
+          filter: drop-shadow(0.2vw 0.2vw 0.1vw #F00);
+          margin-bottom: 3vh; }
+        html body > article:nth-child(13) > article > div {
+          margin-top: 3vh;
+          pointer-events: all;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 20%;
+          height: 15%;
+          border-radius: 2vw;
+          border: 0.3vw solid #FFF;
+          background-color: #333;
+          cursor: pointer; }
+          html body > article:nth-child(13) > article > div > p {
+            pointer-events: none;
+            font-size: 2vw;
+            font-weight: 900;
+            color: #FFF; }
+      html body > article:nth-child(14) {
+        top: 2.5%; }
+        html body > article:nth-child(14) > article {
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: center;
+          box-shadow: none;
+          border: none; }
+          html body > article:nth-child(14) > article > div:nth-child(1) {
+            width: 80%;
+            height: 20%;
+            margin-top: 2vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; }
+            html body > article:nth-child(14) > article > div:nth-child(1) > p {
+              font-size: 6vw;
+              font-weight: 900;
+              color: #FFF;
+              -webkit-text-stroke: 1vw #56F;
+              text-shadow: 0rem 1vw 1.5vw rgba(33, 33, 33, 0.4); }
+            html body > article:nth-child(14) > article > div:nth-child(1) > div {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0%;
+              left: 0%;
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+              html body > article:nth-child(14) > article > div:nth-child(1) > div > p {
+                font-size: 6vw;
+                font-weight: 900;
+                color: #FFF;
+                -webkit-text-fill-color: #FFF; }
+          html body > article:nth-child(14) > article > div:nth-child(2) {
+            width: 80%;
+            height: 25%;
+            margin-top: 2vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; }
+            html body > article:nth-child(14) > article > div:nth-child(2) > p {
+              font-size: 10vw;
+              font-weight: 900;
+              color: #FFF;
+              -webkit-text-stroke: 1vw #F00;
+              text-shadow: 0rem 1vw 1.5vw rgba(33, 33, 33, 0.4);
+              font-style: italic; }
+            html body > article:nth-child(14) > article > div:nth-child(2) > div {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0%;
+              left: 0%;
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+              html body > article:nth-child(14) > article > div:nth-child(2) > div > p {
+                font-size: 10vw;
+                font-weight: 900;
+                color: #FFF;
+                -webkit-text-fill-color: #FFF;
+                font-style: italic; }
+          html body > article:nth-child(14) > article > div:nth-child(3) {
+            width: 20%;
+            height: 8%;
+            border-radius: 2vw;
+            border: 0.3vw solid #FFF;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: all;
+            cursor: pointer;
+            margin-top: 10vh; }
+            html body > article:nth-child(14) > article > div:nth-child(3) > p {
+              pointer-events: none;
+              font-size: 3vw;
+              color: #FFF;
+              font-weight: 900; }
+      html body > article:nth-child(15) > article {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2vh; }
+        html body > article:nth-child(15) > article > article:nth-child(1) {
+          width: 100%;
+          height: 50%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center; }
+          html body > article:nth-child(15) > article > article:nth-child(1) > p {
+            font-weight: 900;
+            font-size: 1.5vw;
+            color: #FFF; }
+          html body > article:nth-child(15) > article > article:nth-child(1) > article {
+            margin-top: 2vh;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 100%;
+            height: 90%; }
+            html body > article:nth-child(15) > article > article:nth-child(1) > article > div {
+              width: 18%;
+              height: 90%;
+              border-radius: 2vw;
+              border: 0.2vw solid #FFF;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              pointer-events: all;
+              cursor: pointer; }
+              html body > article:nth-child(15) > article > article:nth-child(1) > article > div > div {
+                pointer-events: none;
+                width: 90%;
+                height: 90%;
+                background: url("../img/obj1.png") no-repeat center center/contain; }
+              html body > article:nth-child(15) > article > article:nth-child(1) > article > div:nth-child(2) > div {
+                background: url("../img/obj2.png") no-repeat center center/contain; }
+              html body > article:nth-child(15) > article > article:nth-child(1) > article > div:nth-child(3) > div {
+                background: url("../img/obj3.png") no-repeat center center/contain; }
+              html body > article:nth-child(15) > article > article:nth-child(1) > article > div:nth-child(4) > div {
+                background: url("../img/obj4.png") no-repeat center center/contain; }
+              html body > article:nth-child(15) > article > article:nth-child(1) > article > div:nth-child(5) > div {
+                background: url("../img/obj5.png") no-repeat center center/contain; }
+        html body > article:nth-child(15) > article > article:nth-child(2) {
+          width: 100%;
+          height: 20%;
+          position: relative; }
+          html body > article:nth-child(15) > article > article:nth-child(2) > input {
+            position: absolute;
+            width: 50%;
+            height: 90%;
+            left: 25%;
+            top: 5%;
+            border: 0.2vw solid #FFF;
+            border-radius: 1vw;
+            font-size: 1.7vw;
+            font-weight: 600;
+            background-color: #333;
+            text-align: right;
+            padding-right: 2vh;
+            pointer-events: all;
+            color: #FFF; }
+            html body > article:nth-child(15) > article > article:nth-child(2) > input:focus {
+              border-color: #FF3;
+              color: #FF3; }
+        html body > article:nth-child(15) > article > article:nth-child(3) {
+          width: 100%;
+          height: 20%;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          html body > article:nth-child(15) > article > article:nth-child(3) > div {
+            width: 30%;
+            height: 80%;
+            border: 0.3vw solid #FFF;
+            border-radius: 5vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+            pointer-events: all;
+            cursor: pointer; }
+            html body > article:nth-child(15) > article > article:nth-child(3) > div > p {
+              pointer-events: none;
+              font-size: 2vw;
+              font-weight: 900;
+              color: #FFF; }
+    html body .copy_game_area {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0%;
+      transform-style: preserve-3d;
+      left: 0%;
+      perspective: 150vw;
+      z-index: 60000;
+      transform: rotateX(40deg) translateY(-10vh) scale(0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: all; }
+      html body .copy_game_area > section {
+        width: 100vh;
+        height: 100vh;
+        transform-style: preserve-3d;
+        border-radius: 2vw;
+        background: rgba(100, 100, 100, 0.2);
+        box-shadow: 1vw 1vw 1vw 0 rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(0.5rem);
+        -webkit-backdrop-filter: blur(0.5rem);
+        border: 0.1vw solid rgba(255, 255, 255, 0.18);
+        position: relative;
+        transform: rotate(45deg);
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        html body .copy_game_area > section > article:nth-child(1) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 30; }
+          html body .copy_game_area > section > article:nth-child(1) > article {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center; }
+            html body .copy_game_area > section > article:nth-child(1) > article > div {
+              width: 10%;
+              height: 100%;
+              cursor: pointer; }
+              html body .copy_game_area > section > article:nth-child(1) > article > div > div {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                box-shadow: inset 0.1vw 0.1vw 0 #FFF, inset -0.1vw -0.1vw 0 #FFF;
+                border-radius: 0.8vw;
+                position: relative; }
+                html body .copy_game_area > section > article:nth-child(1) > article > div > div > p {
+                  font-size: 1.1vw;
+                  font-weight: 600;
+                  color: #FFF;
+                  filter: drop-shadow(0.1vw 0.1vw 0 #333); }
+                html body .copy_game_area > section > article:nth-child(1) > article > div > div > article:nth-child(2) {
+                  width: 80%;
+                  height: 30%;
+                  position: absolute;
+                  top: 0%;
+                  left: 0;
+                  display: flex;
+                  flex-flow: row nowrap;
+                  justify-content: space-between;
+                  align-items: center;
+                  transform: rotate(-45deg); }
+                  html body .copy_game_area > section > article:nth-child(1) > article > div > div > article:nth-child(2) > div {
+                    position: absolute;
+                    transform-style: flat; }
+                    html body .copy_game_area > section > article:nth-child(1) > article > div > div > article:nth-child(2) > div:nth-child(1) {
+                      width: 70%;
+                      height: 150%;
+                      top: -75%;
+                      left: 35%;
+                      transform: scale(0) rotate(5deg);
+                      background: url("../img/flag-r.png") no-repeat center center/contain; }
+                    html body .copy_game_area > section > article:nth-child(1) > article > div > div > article:nth-child(2) > div:nth-child(2) {
+                      width: 60%;
+                      height: 150%;
+                      top: 10%;
+                      right: -10%;
+                      transform: scale(0) rotate(5deg) rotateY(180deg);
+                      z-index: 100;
+                      background: url("../img/villa-r.png") no-repeat center center/contain; }
+                    html body .copy_game_area > section > article:nth-child(1) > article > div > div > article:nth-child(2) > div:nth-child(3) {
+                      width: 70%;
+                      height: 150%;
+                      top: -30%;
+                      left: 20%;
+                      transform: scale(0) rotate(5deg);
+                      z-index: 50;
+                      background: url("../img/building-r.png") no-repeat center center/contain; }
+                    html body .copy_game_area > section > article:nth-child(1) > article > div > div > article:nth-child(2) > div:nth-child(4) {
+                      width: 150%;
+                      height: 200%;
+                      top: -130%;
+                      left: -40%;
+                      transform: scale(0) rotate(5deg);
+                      background: url("../img/hotel-r.png") no-repeat center center/contain; }
+            html body .copy_game_area > section > article:nth-child(1) > article:nth-child(2) > div {
+              cursor: pointer; }
+            html body .copy_game_area > section > article:nth-child(1) > article:nth-child(2) > div > div > article:nth-child(2) {
+              width: 80%;
+              height: 30%;
+              position: absolute;
+              top: 0%;
+              left: 0;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-between;
+              align-items: center;
+              transform: rotate(-45deg); }
+              html body .copy_game_area > section > article:nth-child(1) > article:nth-child(2) > div > div > article:nth-child(2) > div {
+                position: absolute;
+                transform-style: flat; }
+                html body .copy_game_area > section > article:nth-child(1) > article:nth-child(2) > div > div > article:nth-child(2) > div:nth-child(1) {
+                  width: 70%;
+                  height: 150%;
+                  top: -75%;
+                  left: 35%;
+                  transform: scale(0) rotate(0deg);
+                  background: url("../img/flag-r.png") no-repeat center center/contain; }
+                html body .copy_game_area > section > article:nth-child(1) > article:nth-child(2) > div > div > article:nth-child(2) > div:nth-child(2) {
+                  width: 60%;
+                  height: 150%;
+                  top: 20%;
+                  right: -10%;
+                  transform: scale(0) rotate(0deg);
+                  z-index: 100;
+                  background: url("../img/villa-r.png") no-repeat center center/contain; }
+                html body .copy_game_area > section > article:nth-child(1) > article:nth-child(2) > div > div > article:nth-child(2) > div:nth-child(3) {
+                  width: 70%;
+                  height: 150%;
+                  top: -30%;
+                  left: 20%;
+                  transform: scale(0) rotate(0deg);
+                  z-index: 50;
+                  background: url("../img/building-r.png") no-repeat center center/contain; }
+                html body .copy_game_area > section > article:nth-child(1) > article:nth-child(2) > div > div > article:nth-child(2) > div:nth-child(4) {
+                  width: 150%;
+                  height: 200%;
+                  top: -130%;
+                  left: -40%;
+                  transform: scale(0) rotate(0deg);
+                  background: url("../img/hotel-r.png") no-repeat center center/contain; }
+        html body .copy_game_area > section > article:nth-child(2) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 20;
+          transform: rotate(-90deg); }
+          html body .copy_game_area > section > article:nth-child(2) > article {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center; }
+            html body .copy_game_area > section > article:nth-child(2) > article > div {
+              width: 10%;
+              height: 100%;
+              cursor: pointer; }
+              html body .copy_game_area > section > article:nth-child(2) > article > div > div {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                box-shadow: inset 0.1vw 0.1vw 0 #FFF, inset -0.1vw -0.1vw 0 #FFF;
+                border-radius: 0.8vw;
+                position: relative; }
+                html body .copy_game_area > section > article:nth-child(2) > article > div > div > p {
+                  font-size: 1.1vw;
+                  font-weight: 600;
+                  color: #FFF;
+                  filter: drop-shadow(0.1vw 0.1vw 0 #333); }
+                html body .copy_game_area > section > article:nth-child(2) > article > div > div > article:nth-child(2) {
+                  width: 80%;
+                  height: 30%;
+                  position: absolute;
+                  top: 0%;
+                  left: 0;
+                  display: flex;
+                  flex-flow: row nowrap;
+                  justify-content: space-between;
+                  align-items: center;
+                  transform: rotate(40deg); }
+                  html body .copy_game_area > section > article:nth-child(2) > article > div > div > article:nth-child(2) > div {
+                    position: absolute;
+                    transform-style: flat; }
+                    html body .copy_game_area > section > article:nth-child(2) > article > div > div > article:nth-child(2) > div:nth-child(1) {
+                      width: 70%;
+                      height: 150%;
+                      top: -110%;
+                      left: 30%;
+                      transform: scale(0) rotate(0deg);
+                      background: url("../img/flag-r.png") no-repeat center center/contain; }
+                    html body .copy_game_area > section > article:nth-child(2) > article > div > div > article:nth-child(2) > div:nth-child(2) {
+                      width: 60%;
+                      height: 150%;
+                      top: -100%;
+                      left: 65%;
+                      transform: scale(0) rotate(0deg) rotateY(180deg);
+                      background: url("../img/villa-r.png") no-repeat center center/contain; }
+                    html body .copy_game_area > section > article:nth-child(2) > article > div > div > article:nth-child(2) > div:nth-child(3) {
+                      width: 70%;
+                      height: 150%;
+                      top: -60%;
+                      left: 30%;
+                      transform: scale(0) rotate(0deg) rotateY(180deg);
+                      z-index: 50;
+                      background: url("../img/building-r.png") no-repeat center center/contain; }
+                    html body .copy_game_area > section > article:nth-child(2) > article > div > div > article:nth-child(2) > div:nth-child(4) {
+                      width: 150%;
+                      height: 200%;
+                      top: -80%;
+                      left: -35%;
+                      z-index: 100;
+                      transform: scale(0) rotate(0deg);
+                      background: url("../img/hotel-r.png") no-repeat center center/contain; }
+              html body .copy_game_area > section > article:nth-child(2) > article > div:nth-child(1) {
+                z-index: 100; }
+              html body .copy_game_area > section > article:nth-child(2) > article > div:nth-child(2) {
+                z-index: 90; }
+              html body .copy_game_area > section > article:nth-child(2) > article > div:nth-child(3) {
+                z-index: 80; }
+              html body .copy_game_area > section > article:nth-child(2) > article > div:nth-child(4) {
+                z-index: 70; }
+              html body .copy_game_area > section > article:nth-child(2) > article > div:nth-child(5) {
+                z-index: 60; }
+              html body .copy_game_area > section > article:nth-child(2) > article > div:nth-child(6) {
+                z-index: 50; }
+              html body .copy_game_area > section > article:nth-child(2) > article > div:nth-child(7) {
+                z-index: 40; }
+            html body .copy_game_area > section > article:nth-child(2) > article:nth-child(2) > div {
+              cursor: pointer; }
+            html body .copy_game_area > section > article:nth-child(2) > article:nth-child(2) > div > div > article:nth-child(2) {
+              width: 80%;
+              height: 30%;
+              position: absolute;
+              top: 0%;
+              left: 0;
+              display: flex;
+              flex-flow: row nowrap;
+              justify-content: space-between;
+              align-items: center;
+              transform: rotate(45deg); }
+              html body .copy_game_area > section > article:nth-child(2) > article:nth-child(2) > div > div > article:nth-child(2) > div {
+                position: absolute;
+                transform-style: flat; }
+                html body .copy_game_area > section > article:nth-child(2) > article:nth-child(2) > div > div > article:nth-child(2) > div:nth-child(1) {
+                  width: 70%;
+                  height: 150%;
+                  top: -110%;
+                  left: 30%;
+                  transform: scale(0) rotate(0deg);
+                  background: url("../img/flag-r.png") no-repeat center center/contain; }
+                html body .copy_game_area > section > article:nth-child(2) > article:nth-child(2) > div > div > article:nth-child(2) > div:nth-child(2) {
+                  width: 60%;
+                  height: 150%;
+                  top: -100%;
+                  left: 65%;
+                  transform: scale(0) rotate(0deg) rotateY(180deg);
+                  background: url("../img/villa-r.png") no-repeat center center/contain; }
+                html body .copy_game_area > section > article:nth-child(2) > article:nth-child(2) > div > div > article:nth-child(2) > div:nth-child(3) {
+                  width: 70%;
+                  height: 150%;
+                  top: -60%;
+                  left: 30%;
+                  transform: scale(0) rotate(0deg) rotateY(180deg);
+                  z-index: 50;
+                  background: url("../img/building-r.png") no-repeat center center/contain; }
+                html body .copy_game_area > section > article:nth-child(2) > article:nth-child(2) > div > div > article:nth-child(2) > div:nth-child(4) {
+                  width: 150%;
+                  height: 200%;
+                  top: -80%;
+                  left: -35%;
+                  z-index: 100;
+                  transform: scale(0) rotate(0deg);
+                  background: url("../img/hotel-r.png") no-repeat center center/contain; }
+        html body .copy_game_area > section > article:nth-child(3) {
+          display: none; }
+        html body .copy_game_area > section > article:nth-child(4) {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 0; }
+          html body .copy_game_area > section > article:nth-child(4) > article {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center; }
+            html body .copy_game_area > section > article:nth-child(4) > article > div {
+              width: 15%;
+              height: 100%;
+              background: #56F;
+              box-shadow: inset 0.1vw 0.1vw 0 #FFF, inset -0.1vw -0.1vw 0 #FFF;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              z-index: -10;
+              border-radius: 0.8vw; }
+              html body .copy_game_area > section > article:nth-child(4) > article > div > p {
+                font-size: 1.8vw;
+                font-weight: 600;
+                color: #FFF;
+                transform: rotate(-45deg); }
+            html body .copy_game_area > section > article:nth-child(4) > article:nth-child(1) > div:first-child {
+              border-top-left-radius: 2vw; }
+            html body .copy_game_area > section > article:nth-child(4) > article:nth-child(1) > div:last-child {
+              border-top-right-radius: 2vw; }
+            html body .copy_game_area > section > article:nth-child(4) > article:nth-child(2) > div:first-child {
+              border-bottom-left-radius: 2vw; }
+            html body .copy_game_area > section > article:nth-child(4) > article:nth-child(2) > div:last-child {
+              border-bottom-right-radius: 2vw; }
+        html body .copy_game_area > section .olympic_mark {
+          width: 95%;
+          height: 25%;
+          position: absolute;
+          bottom: 10%;
+          left: 2.5%;
+          border: 0.2vh solid #333;
+          background: #FFF url("../img/olympic.png") no-repeat 0% center/contain;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: flex-end;
+          align-items: center;
+          transform: scale(0);
+          pointer-events: none; }
+          html body .copy_game_area > section .olympic_mark > p {
+            pointer-events: none;
+            margin-right: 0.2vh;
+            font-size: 0.7vw;
+            color: #333;
+            font-weight: 600; }
+      html body .copy_game_area > article {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center; }
+        html body .copy_game_area > article > div:nth-child(1) {
+          width: 80%;
+          height: 20%;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          html body .copy_game_area > article > div:nth-child(1) > p {
+            font-size: 2vw;
+            font-weight: 900;
+            color: #FFF;
+            filter: drop-shadow(0.2vw 0.2vw 0 #000); }
+        html body .copy_game_area > article > div:nth-child(2) {
+          width: 100%;
+          height: 40%;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-around;
+          align-items: center;
+          border-top: 0.5vw dotted #FFF3; }
+          html body .copy_game_area > article > div:nth-child(2) > p {
+            font-size: 4vw;
+            font-weight: 900;
+            color: #FFF;
+            filter: drop-shadow(0.2vw 0.2vw 0 #F00); }
+          html body .copy_game_area > article > div:nth-child(2) > div {
+            width: 30%;
+            height: 40%;
+            border-radius: 1vw;
+            border: 0.3vw solid #FFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            pointer-events: all;
+            cursor: pointer; }
+            html body .copy_game_area > article > div:nth-child(2) > div > p {
+              pointer-events: none;
+              font-size: 3vw;
+              font-weight: 900;
+              color: #FFF; }
+            html body .copy_game_area > article > div:nth-child(2) > div > div {
+              pointer-events: none;
+              position: absolute;
+              top: 47%;
+              left: 5%;
+              width: 90%;
+              height: 6%;
+              background-color: #F00;
+              transform: scale(0); }
+    html body .hidden_popup {
+      display: none; }
+
+/*# sourceMappingURL=marble.css.map */

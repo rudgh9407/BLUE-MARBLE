@@ -5,7 +5,7 @@ const app = express();
 const con = mysql.createConnection({
   host: 'localhost',
   user: 'c16st10',
-  password: 'Z9U7dffwthoQloDI',
+  password: '**************',
   database: 'c16st10'
 });
 app.use(express.static(__dirname + '../../'));
